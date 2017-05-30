@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="/home" class="ecc.cords.HomeController">
+	    <property name="commandClass" value="ecc.cords.EmployeeDTO"/>
+	    <property name="formView" value="home"/>
+	</bean>
+
+	<bean name="/addEmployee" class="ecc.cords.AddEmployeeController">
+		<property name="commandClass" value="ecc.cords.EmployeeDTO"/>
+		<property name="formView" value="employeeForm"/>
+	</bean>
+
+	<bean name="/employeeProfile" class="ecc.cords.ProfileController">
+		<property name="commandClass" value="ecc.cords.EmployeeDTO"/>
+		<property name="formView" value="profile"/>
+	</bean>
+
+	<bean name="/manageRoles" class="ecc.cords.RolesController">
+		<property name="commandName" value="role" />
+		<property name="commandClass" value="ecc.cords.RoleDTO"/>
+		<property name="formView" value="roles"/>
+	</bean>
+
+</beans>
