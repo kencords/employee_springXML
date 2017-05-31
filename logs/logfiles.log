@@ -1,0 +1,251 @@
+2017-05-31 16:56:11 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-05-31 16:56:11 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 16:56:12 [INFO] ecc.cords.DaoService - Getting Employee List ordered by name.lastName,asc 
+2017-05-31 16:56:40 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-05-31 16:56:40 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 16:56:40 [INFO] ecc.cords.DaoService - Getting Employee List ordered by name.lastName,asc 
+2017-05-31 16:56:54 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 16:56:54 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 16:56:54 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 16:56:54 [INFO] ecc.cords.DaoService - Getting Employee List ordered by gwa,asc 
+2017-05-31 16:57:16 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 16:57:16 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 16:57:16 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 16:57:16 [DEBUG] ecc.cords.ProfileController - Displaying new form 
+2017-05-31 16:57:16 [DEBUG] ecc.cords.ProfileController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 16:57:16 [INFO] ecc.cords.ProfileController - called showForm() 
+2017-05-31 16:57:16 [INFO] ecc.cords.DaoService - Getting records of type class ecc.cords.Employee with ID of 2 
+2017-05-31 16:57:18 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-05-31 16:57:18 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 16:57:18 [INFO] ecc.cords.DaoService - Getting Employee List ordered by name.lastName,asc 
+2017-05-31 17:14:54 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-05-31 17:14:54 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:14:54 [INFO] ecc.cords.DaoService - Getting Employee List ordered by name.lastName,asc 
+2017-05-31 17:15:02 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:15:02 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:15:02 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:15:02 [INFO] ecc.cords.DaoService - Getting Employee List ordered by name.lastName,asc 
+2017-05-31 17:15:07 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:15:07 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:15:07 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:15:07 [INFO] ecc.cords.DaoService - Getting Employee List ordered by gwa,asc 
+2017-05-31 17:15:14 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:15:14 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:15:14 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:15:14 [INFO] ecc.cords.DaoService - Getting Employee List ordered by gwa,asc 
+2017-05-31 17:15:16 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:15:16 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:15:16 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:15:16 [INFO] ecc.cords.DaoService - Getting Employee List ordered by gwa,asc 
+2017-05-31 17:17:06 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-05-31 17:17:06 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:17:06 [INFO] ecc.cords.DaoService - Getting Employee List ordered by name.lastName,asc 
+2017-05-31 17:17:12 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:17:12 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:17:12 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:17:12 [INFO] ecc.cords.DaoService - Getting Employee List ordered by gwa,asc 
+2017-05-31 17:17:22 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:17:22 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:17:22 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:17:22 [INFO] ecc.cords.DaoService - Getting Employee List ordered by name.lastName,desc 
+2017-05-31 17:17:33 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:17:33 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:17:33 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:17:33 [INFO] ecc.cords.DaoService - Getting Employee List ordered by hireDate,desc 
+2017-05-31 17:17:38 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:17:38 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:17:38 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:17:38 [INFO] ecc.cords.DaoService - Getting Employee List ordered by gwa,asc 
+2017-05-31 17:19:49 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-05-31 17:19:49 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:19:50 [INFO] ecc.cords.DaoService - Getting Employee List ordered by name.lastName,asc 
+2017-05-31 17:19:57 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:19:57 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:19:57 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:19:57 [INFO] ecc.cords.DaoService - Getting Employee List ordered by name.lastName,asc 
+2017-05-31 17:20:00 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:20:00 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:20:00 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:20:00 [INFO] ecc.cords.DaoService - Getting Employee List ordered by gwa,asc 
+2017-05-31 17:23:58 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-05-31 17:23:58 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:23:58 [INFO] ecc.cords.DaoService - Getting Employee List ordered by name.lastName,asc 
+2017-05-31 17:24:10 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:24:10 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:24:10 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:24:10 [INFO] ecc.cords.DaoService - Getting Employee List ordered by gwa,asc 
+2017-05-31 17:27:52 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-05-31 17:27:52 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:27:53 [INFO] ecc.cords.DaoService - Getting Employee List ordered by name.lastName,asc 
+2017-05-31 17:28:24 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-05-31 17:28:25 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:28:25 [INFO] ecc.cords.DaoService - Getting Employee List ordered by name.lastName,asc 
+2017-05-31 17:28:32 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:28:32 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:28:32 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:28:32 [INFO] ecc.cords.DaoService - Getting Employee List ordered by gwa,asc 
+2017-05-31 17:29:01 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:29:01 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:29:01 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:29:01 [INFO] ecc.cords.DaoService - Getting Employee List ordered by gwa,asc 
+2017-05-31 17:39:54 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-05-31 17:39:54 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:39:55 [INFO] ecc.cords.DaoService - Getting Employee List ordered by name.lastName,asc 
+2017-05-31 17:40:00 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:40:01 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:40:01 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:40:01 [INFO] ecc.cords.DaoService - Getting Employee List ordered by hireDate,asc 
+2017-05-31 17:40:07 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:40:07 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:40:07 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:40:07 [INFO] ecc.cords.DaoService - Getting Employee List ordered by hireDate,asc 
+2017-05-31 17:40:15 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:40:15 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:40:15 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:40:15 [INFO] ecc.cords.DaoService - Getting Employee List ordered by gwa,asc 
+2017-05-31 17:40:24 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:40:24 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:40:24 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:40:24 [INFO] ecc.cords.DaoService - Getting Employee List ordered by gwa,asc 
+2017-05-31 17:42:36 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-05-31 17:42:36 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:42:36 [INFO] ecc.cords.DaoService - Getting Employee List ordered by name.lastName,asc 
+2017-05-31 17:42:50 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:42:50 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:42:50 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:42:50 [INFO] ecc.cords.DaoService - Getting Employee List ordered by hireDate,asc with name matching 1 
+2017-05-31 17:43:00 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:43:00 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:43:00 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:43:00 [INFO] ecc.cords.DaoService - Getting Employee List ordered by gwa,asc with name matching 1 
+2017-05-31 17:43:06 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:43:06 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:43:06 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:43:06 [INFO] ecc.cords.DaoService - Getting Employee List ordered by gwa,asc with name matching K 
+2017-05-31 17:43:15 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:43:15 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:43:15 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:43:15 [INFO] ecc.cords.DaoService - Getting Employee List ordered by hireDate,asc 
+2017-05-31 17:43:59 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:43:59 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:43:59 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:43:59 [INFO] ecc.cords.DaoService - Getting Employee List ordered by hireDate,asc 
+2017-05-31 17:46:35 [DEBUG] ecc.cords.UploadFileController - Displaying new form 
+2017-05-31 17:46:35 [DEBUG] ecc.cords.UploadFileController - Creating new command of class [ecc.cords.EmployeeFile] 
+2017-05-31 17:46:41 [DEBUG] ecc.cords.UploadFileController - Creating new command of class [ecc.cords.EmployeeFile] 
+2017-05-31 17:46:41 [DEBUG] ecc.cords.UploadFileController - No errors -> processing submit 
+2017-05-31 17:46:41 [INFO] ecc.cords.UploadFileController - called onSubmit() 
+2017-05-31 17:46:41 [INFO] ecc.cords.UploadFileController - Parsing file emp_details.txt 
+2017-05-31 17:46:41 [INFO] ecc.cords.DaoService - Getting records of type class ecc.cords.Role with ID of 8 
+2017-05-31 17:46:41 [INFO] ecc.cords.DaoService - Saving record ecc.cords.Employee@121adcc 
+2017-05-31 17:46:43 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-05-31 17:46:43 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:46:43 [INFO] ecc.cords.DaoService - Getting Employee List ordered by name.lastName,asc 
+2017-05-31 17:46:46 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:46:46 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:46:46 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:46:46 [INFO] ecc.cords.DaoService - Getting Employee List ordered by hireDate,asc 
+2017-05-31 17:46:49 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:46:49 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:46:49 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:46:49 [INFO] ecc.cords.DaoService - Getting Employee List ordered by hireDate,asc with name matching k 
+2017-05-31 17:46:54 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:46:54 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:46:54 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:46:54 [INFO] ecc.cords.DaoService - Getting records of type class ecc.cords.Employee with ID of 9 
+2017-05-31 17:46:54 [INFO] ecc.cords.DaoService - Deleting record ecc.cords.Employee@9ca501 
+2017-05-31 17:46:54 [INFO] ecc.cords.DaoService - Getting Employee List ordered by name.lastName,asc 
+2017-05-31 17:47:22 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:47:22 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:47:22 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:47:22 [INFO] ecc.cords.DaoService - Getting Employee List ordered by hireDate,asc with name matching ky 
+2017-05-31 17:47:26 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:47:26 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:47:26 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:47:26 [INFO] ecc.cords.DaoService - Getting Employee List ordered by hireDate,asc with name matching ord 
+2017-05-31 17:47:31 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:47:31 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:47:31 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:47:31 [INFO] ecc.cords.DaoService - Getting Employee List ordered by hireDate,asc with name matching osa 
+2017-05-31 17:47:41 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 17:47:41 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 17:47:41 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 17:47:41 [INFO] ecc.cords.DaoService - Getting Employee List ordered by gwa,asc 
+2017-05-31 18:18:25 [DEBUG] ecc.cords.RolesController - Displaying new form 
+2017-05-31 18:18:25 [DEBUG] ecc.cords.RolesController - Creating new command of class [ecc.cords.RoleDTO] 
+2017-05-31 18:18:26 [INFO] ecc.cords.DaoService - Getting all records of type class ecc.cords.Role 
+2017-05-31 18:18:31 [DEBUG] ecc.cords.RolesController - Creating new command of class [ecc.cords.RoleDTO] 
+2017-05-31 18:18:31 [DEBUG] ecc.cords.RolesController - No errors -> processing submit 
+2017-05-31 18:18:31 [INFO] ecc.cords.RolesController - called onSubmit() 
+2017-05-31 18:18:31 [INFO] ecc.cords.DaoService - Getting records of type class ecc.cords.Role with ID of 5 
+2017-05-31 18:18:31 [INFO] ecc.cords.DaoService - Getting all records of type class ecc.cords.Role 
+2017-05-31 18:18:32 [DEBUG] ecc.cords.RolesController - Creating new command of class [ecc.cords.RoleDTO] 
+2017-05-31 18:18:32 [DEBUG] ecc.cords.RolesController - No errors -> processing submit 
+2017-05-31 18:18:32 [INFO] ecc.cords.RolesController - called onSubmit() 
+2017-05-31 18:18:32 [INFO] ecc.cords.DaoService - Getting records of type class ecc.cords.Role with ID of 4 
+2017-05-31 18:18:32 [INFO] ecc.cords.DaoService - Getting all records of type class ecc.cords.Role 
+2017-05-31 18:18:34 [DEBUG] ecc.cords.RolesController - Creating new command of class [ecc.cords.RoleDTO] 
+2017-05-31 18:18:34 [DEBUG] ecc.cords.RolesController - No errors -> processing submit 
+2017-05-31 18:18:34 [INFO] ecc.cords.RolesController - called onSubmit() 
+2017-05-31 18:18:34 [INFO] ecc.cords.DaoService - Getting records of type class ecc.cords.Role with ID of 3 
+2017-05-31 18:18:34 [INFO] ecc.cords.DaoService - Getting all records of type class ecc.cords.Role 
+2017-05-31 18:18:35 [DEBUG] ecc.cords.RolesController - Creating new command of class [ecc.cords.RoleDTO] 
+2017-05-31 18:18:35 [DEBUG] ecc.cords.RolesController - No errors -> processing submit 
+2017-05-31 18:18:35 [INFO] ecc.cords.RolesController - called onSubmit() 
+2017-05-31 18:18:35 [INFO] ecc.cords.DaoService - Getting records of type class ecc.cords.Role with ID of 6 
+2017-05-31 18:18:35 [INFO] ecc.cords.DaoService - Getting all records of type class ecc.cords.Role 
+2017-05-31 18:18:37 [DEBUG] ecc.cords.RolesController - Creating new command of class [ecc.cords.RoleDTO] 
+2017-05-31 18:18:37 [DEBUG] ecc.cords.RolesController - No errors -> processing submit 
+2017-05-31 18:18:37 [INFO] ecc.cords.RolesController - called onSubmit() 
+2017-05-31 18:18:37 [INFO] ecc.cords.DaoService - Getting records of type class ecc.cords.Role with ID of 7 
+2017-05-31 18:18:37 [INFO] ecc.cords.DaoService - Getting all records of type class ecc.cords.Role 
+2017-05-31 18:18:38 [DEBUG] ecc.cords.RolesController - Creating new command of class [ecc.cords.RoleDTO] 
+2017-05-31 18:18:38 [DEBUG] ecc.cords.RolesController - No errors -> processing submit 
+2017-05-31 18:18:38 [INFO] ecc.cords.RolesController - called onSubmit() 
+2017-05-31 18:18:38 [INFO] ecc.cords.DaoService - Getting records of type class ecc.cords.Role with ID of 8 
+2017-05-31 18:18:38 [INFO] ecc.cords.DaoService - Getting all records of type class ecc.cords.Role 
+2017-05-31 18:18:40 [DEBUG] ecc.cords.RolesController - Creating new command of class [ecc.cords.RoleDTO] 
+2017-05-31 18:18:40 [DEBUG] ecc.cords.RolesController - No errors -> processing submit 
+2017-05-31 18:18:40 [INFO] ecc.cords.RolesController - called onSubmit() 
+2017-05-31 18:18:40 [INFO] ecc.cords.DaoService - Getting records of type class ecc.cords.Role with ID of 1 
+2017-05-31 18:18:40 [INFO] ecc.cords.DaoService - Getting all records of type class ecc.cords.Role 
+2017-05-31 18:18:41 [DEBUG] ecc.cords.RolesController - Creating new command of class [ecc.cords.RoleDTO] 
+2017-05-31 18:18:41 [DEBUG] ecc.cords.RolesController - No errors -> processing submit 
+2017-05-31 18:18:41 [INFO] ecc.cords.RolesController - called onSubmit() 
+2017-05-31 18:18:41 [INFO] ecc.cords.DaoService - Getting records of type class ecc.cords.Role with ID of 2 
+2017-05-31 18:18:41 [INFO] ecc.cords.DaoService - Getting all records of type class ecc.cords.Role 
+2017-05-31 18:18:44 [DEBUG] ecc.cords.RolesController - Creating new command of class [ecc.cords.RoleDTO] 
+2017-05-31 18:18:44 [DEBUG] ecc.cords.RolesController - No errors -> processing submit 
+2017-05-31 18:18:44 [INFO] ecc.cords.RolesController - called onSubmit() 
+2017-05-31 18:18:44 [INFO] ecc.cords.DaoService - Getting all records of type class ecc.cords.Role 
+2017-05-31 18:18:46 [DEBUG] ecc.cords.RolesController - Creating new command of class [ecc.cords.RoleDTO] 
+2017-05-31 18:18:46 [DEBUG] ecc.cords.RolesController - No errors -> processing submit 
+2017-05-31 18:18:46 [INFO] ecc.cords.RolesController - called onSubmit() 
+2017-05-31 18:18:46 [INFO] ecc.cords.DaoService - Getting records of type class ecc.cords.Role with ID of 1 
+2017-05-31 18:18:46 [INFO] ecc.cords.DaoService - Getting all records of type class ecc.cords.Role 
+2017-05-31 18:19:08 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-05-31 18:19:08 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 18:19:08 [INFO] ecc.cords.DaoService - Getting Employee List ordered by name.lastName,asc 
+2017-05-31 18:19:10 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 18:19:10 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 18:19:10 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 18:19:10 [INFO] ecc.cords.DaoService - Getting Employee List ordered by hireDate,asc 
+2017-05-31 18:19:15 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 18:19:15 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 18:19:15 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 18:19:15 [INFO] ecc.cords.DaoService - Getting Employee List ordered by hireDate,asc 
+2017-05-31 18:19:18 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 18:19:18 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 18:19:18 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 18:19:18 [INFO] ecc.cords.DaoService - Getting Employee List ordered by gwa,asc 
+2017-05-31 18:19:23 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 18:19:23 [DEBUG] ecc.cords.HomeController - No errors -> processing submit 
+2017-05-31 18:19:23 [INFO] ecc.cords.HomeController - called onSubmit() 
+2017-05-31 18:19:23 [INFO] ecc.cords.DaoService - Getting Employee List ordered by gwa,desc 
+2017-05-31 18:19:27 [DEBUG] ecc.cords.AddEmployeeController - Displaying new form 
+2017-05-31 18:19:27 [DEBUG] ecc.cords.AddEmployeeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 18:19:27 [INFO] ecc.cords.DaoService - Getting all records of type class ecc.cords.Role 
+2017-05-31 18:19:30 [DEBUG] ecc.cords.AddEmployeeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-05-31 18:19:30 [DEBUG] ecc.cords.AddEmployeeController - No errors -> processing submit 
+2017-05-31 18:19:30 [INFO] ecc.cords.AddEmployeeController - called onSubmit() 
+2017-05-31 18:19:30 [INFO] ecc.cords.DaoService - Getting all records of type class ecc.cords.Role 

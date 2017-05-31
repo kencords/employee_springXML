@@ -1,3 +1,4 @@
+
 package ecc.cords;
 
 import java.util.ArrayList;
@@ -141,8 +142,8 @@ public class DTO_EntityMapper {
 		return employeesDTO;		
 	}
 
-	public List<EmployeeDTO> mapSimplifiedEmployees(String order, String asc_desc) {
-		List<Object[]> employees = daoService.getSimplifiedEmployees(order, asc_desc);
+	public List<EmployeeDTO> mapSimplifiedEmployees(String order, String asc_desc, String query) {
+		List<Object[]> employees = daoService.getSimplifiedEmployees(order, asc_desc, query);
 		List<EmployeeDTO> employeesDTO = new ArrayList<>();
 		employees.forEach(obj -> {
 			EmployeeDTO employeeDTO = new EmployeeDTO();

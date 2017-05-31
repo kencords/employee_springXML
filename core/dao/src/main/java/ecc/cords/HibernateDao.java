@@ -7,6 +7,7 @@ import org.hibernate.Criteria;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Property;
+import org.hibernate.criterion.Restrictions;
 import org.hibernate.HibernateException;
 import org.hibernate.stat.Statistics;
 import org.hibernate.SessionFactory;
@@ -48,9 +49,17 @@ public class HibernateDao implements Dao {
 	   	return list;
  	}
 
- 	public <T> List getAllSimplified(String order, String asc_desc, final Class<T> type) {
+ 	public <T> List getAllSimplified(String order, String asc_desc, String query, final Class<T> type) {
  		Criteria criteria = sessionFactory.getCurrentSession().createCriteria(type);
  		criteria.setCacheable(true);
+ 		if(query!=null && !query.trim().equals("")) {
+ 			query = "%" + query + "%";
+ 			criteria.add(Restrictions.disjunction()
+                .add(Restrictions.like("name.lastName", query).ignoreCase())
+                .add(Restrictions.like("name.firstName", query).ignoreCase())
+                .add(Restrictions.like("name.middleName", query).ignoreCase())
+            );
+ 		}
  		criteria.setProjection(Projections.projectionList()
  										  .add(Projections.property("empId"))
  										  .add(Projections.property("name"))

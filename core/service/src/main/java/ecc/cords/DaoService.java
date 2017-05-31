@@ -42,9 +42,10 @@ public class DaoService{
 		return dao.getByCriteria(order, Employee.class);
 	}
 
-	public List getSimplifiedEmployees(String order, String asc_desc) {
-		logger.info("Getting Employee List ordered by " + order + "," + asc_desc);
-		return dao.getAllSimplified(order, asc_desc, Employee.class);
+	public List getSimplifiedEmployees(String order, String asc_desc, String query) {
+		logger.info("Getting Employee List ordered by " + order + "," + asc_desc + 
+		(query==null||query.trim().equals("")? "" : " with name matching " + query));
+		return dao.getAllSimplified(order, asc_desc, query, Employee.class);
 	}
     
 	public <E> void saveElement(E e) {

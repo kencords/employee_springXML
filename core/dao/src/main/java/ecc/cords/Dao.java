@@ -14,7 +14,7 @@ public interface Dao {
 
 	public <T> List<T> getAll(final Class<T> type);
 
- 	public <T> List getAllSimplified(String order, String asc_desc, final Class<T> type);
+ 	public <T> List getAllSimplified(String order, String asc_desc, String query, final Class<T> type);
 
  	public <T> List getByCriteria(String order, final Class<T> type);
 

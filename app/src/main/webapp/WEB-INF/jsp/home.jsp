@@ -32,28 +32,36 @@
 	  					<option value="desc">Descending</option>
 	  				</select>
 	  				<button style="display:inline-block;" type ="submit" value="" name="sortBtn">Sort</button>
-
-	  				<table style="width:100%" border="1">
-	  					<tr>
-	  						<th align="center">ID</th>
-	  						<th align="center">Name</th>
-	  						<th align="center">GWA</th>
-	  						<th align="center">Hire Date</th>
-	  						<th align="center">Actions</th>
-	  					</tr>
-	  					<c:forEach var="employee" items="${empList}">
-	  						<tr>
-	  							<td align="center">${employee.empId}</td>
-	  							<td align="center">${employee.lastName}, ${employee.firstName} ${employee.middleName} ${employee.suffix}</td>
-	  							<td align="center">${employee.gwa}</td>
-	  							<td align="center">${employee.hireDate}</td>
-	  							<td align="center">
-	  								<button style="display:inline-block;" type ="submit" value="${employee.empId}" name="viewEmpBtn">View</button>
-	  								<button style="display:inline-block;" type ="submit" value="${employee.empId}" name="delEmpBtn">Delete</button>
-	  							</td>
-	  						</tr>
-	  					</c:forEach>
-	  				</table>
+	  				<input type="text" name="search" value ="${param.search}" placeholder="Search by Name">
+	  				<button style="display:inline-block;" type ="submit" value="" name="searchBtn">Search</button>
+	  				<c:choose>
+		  				<c:when test="${empty empList}">
+		  					<div align="center"><h2>No Employees Found</h2></div>
+		  				</c:when>
+		  				<c:otherwise>
+		  					<table style="width:100%" border="1">
+			  					<tr>
+			  						<th align="center">ID</th>
+			  						<th align="center">Name</th>
+			  						<th align="center">GWA</th>
+			  						<th align="center">Hire Date</th>
+			  						<th align="center">Actions</th>
+			  					</tr>
+				  				<c:forEach var="employee" items="${empList}">
+				  					<tr>
+				  						<td align="center">${employee.empId}</td>
+				  						<td align="center">${employee.lastName}, ${employee.firstName} ${employee.middleName} ${employee.suffix}</td>
+				  						<td align="center">${employee.gwa}</td>
+				  						<td align="center">${employee.hireDate}</td>
+				  						<td align="center">
+				  							<button style="display:inline-block;" type ="submit" value="${employee.empId}" name="viewEmpBtn">View</button>
+				  							<button style="display:inline-block;" type ="submit" value="${employee.empId}" name="delEmpBtn">Delete</button>
+				  						</td>
+				  					</tr>
+				  				</c:forEach>
+				  			</table>
+			  			</c:otherwise>
+	  				</c:choose>
 	  		</form>
   		</div>
   	</body>

@@ -36,7 +36,7 @@ public class HomeController extends SimpleFormController {
 	protected ModelAndView showForm(HttpServletRequest req, HttpServletResponse res, BindException errors) {
 		req.getSession().invalidate();
 		ModelAndView mav = new ModelAndView("home");
-		List<EmployeeDTO> empList = mapper.mapSimplifiedEmployees("name.lastName", "asc");
+		List<EmployeeDTO> empList = mapper.mapSimplifiedEmployees("name.lastName", "asc", "");
 		mav.addObject("empList", empList);
 		return mav;
 	}
@@ -50,11 +50,23 @@ public class HomeController extends SimpleFormController {
 		ModelAndView mav = new ModelAndView("home");
 		String order = "";
 		String ascDesc = "";
+		String query = "";
 
+		if(req.getParameter("searchBtn") != null) {
+			order = "name.lastName";
+			ascDesc = "asc";
+			query = req.getParameter("search");
+			String msg = (query==null || query.trim().equals("")? "Search field cannot be empty!" :
+			"Searched by name matching %" + query + "%");
+			String color =(query==null || query.trim().equals("")? "red" : "green");
+			logMsgs.add(new LogMsg(msg, color));
+		}
 		if(req.getParameter("sortBtn") != null) {
 			order = req.getParameter("sort");
 			ascDesc = req.getParameter("asc_desc");
-			logMsgs.add(new LogMsg("Sorted By " + order + ":" + ascDesc, "green"));
+			query = req.getParameter("search");
+			logMsgs.add(new LogMsg("Sorted By " + order + ":" + ascDesc + 
+			(query!=null && !query.trim().equals("") ? " with name matching %" + query + "%" : ""), "green"));
 		}
 
 		if(req.getParameter("delEmpBtn") != null) {
@@ -67,17 +79,17 @@ public class HomeController extends SimpleFormController {
 
 		req.setAttribute("logMsgs", Utils.sortLogMsgs(logMsgs));
 		logMsgs.clear();
-		empList = displayEmployees(order, ascDesc);
+		empList = displayEmployees(order, ascDesc, query);
 		mav.addObject("empList", empList);
 		return mav;
 	}
 
-	public List<EmployeeDTO> displayEmployees(String order, String asc_desc) {
+	public List<EmployeeDTO> displayEmployees(String order, String asc_desc, String query) {
 		String dbOrder = "name.lastName";
 		String dbAscDesc = (asc_desc!=null && !asc_desc.equals(""))? asc_desc : "asc";
 		if(order!=null && !order.equals("")) {
 			dbOrder = order.equals("GWA")? "gwa" : (order.equals("LastName")? "name.lastName" : "hireDate");
 		}
-		return mapper.mapSimplifiedEmployees(dbOrder, dbAscDesc);
+		return mapper.mapSimplifiedEmployees(dbOrder, dbAscDesc, query);
 	}
 }
