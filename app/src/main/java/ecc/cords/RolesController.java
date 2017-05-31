@@ -13,12 +13,20 @@ import java.util.stream.Collectors;
 
 public class RolesController extends SimpleFormController {
 
-	private static DaoService daoService = new DaoService();
-	private static DTO_EntityMapper mapper = new DTO_EntityMapper();
+	private DTO_EntityMapper mapper;
+	private EmployeeManager empManager;
 	private List<LogMsg> logMsgs = new ArrayList<>();
 
 	public RolesController() {
 		setCommandClass(RoleDTO.class);
+	}
+
+	public void setEmployeeManager(EmployeeManager empManager) {
+		this.empManager = empManager;
+	}
+
+	public void setMapper(DTO_EntityMapper mapper) {
+		this.mapper = mapper;
 	}
 
 	@Override
@@ -72,9 +80,9 @@ public class RolesController extends SimpleFormController {
 	private RoleDTO getRole(int roleId) {
 		RoleDTO role = new RoleDTO();
 		try {
-			role = EmployeeManager.getRole(roleId);
+			role = empManager.getRole(roleId);
 		} catch(Exception ex) {
-			logMsgs.add(new LogMsg(EmployeeManager.getLogMsg(), "red"));
+			logMsgs.add(new LogMsg(empManager.getLogMsg(), "red"));
 		}
 		return role;
 	}
@@ -92,16 +100,16 @@ public class RolesController extends SimpleFormController {
 			logMsgs.add(new LogMsg("Role Name must not be Empty!", "red"));
 			return;
 		}
-		logMsgs.add(EmployeeManager.createRole(roleName.toUpperCase()));
+		logMsgs.add(empManager.createRole(roleName.toUpperCase()));
 	}
 
 	private void processDeleteRole(int roleId) {
 		RoleDTO role = new RoleDTO();
 		try {
 			role = getRole(roleId);
-			logMsgs.add(new LogMsg(EmployeeManager.deleteRole(role), "green"));
+			logMsgs.add(new LogMsg(empManager.deleteRole(role), "green"));
 		} catch(Exception ex) {
-			logMsgs.add(new LogMsg(EmployeeManager.getLogMsg(), "red"));
+			logMsgs.add(new LogMsg(empManager.getLogMsg(), "red"));
 			logMsgs.add(new LogMsg("Role is currently used by: \n" + getRoleOwners(role), "red"));
 		}
 	}
@@ -113,10 +121,10 @@ public class RolesController extends SimpleFormController {
 		}
 		RoleDTO role = new RoleDTO();
 		try {
-			role = EmployeeManager.getRole(roleId);
-			logMsgs.add(EmployeeManager.updateRole(role, roleName.toUpperCase()));
+			role = empManager.getRole(roleId);
+			logMsgs.add(empManager.updateRole(role, roleName.toUpperCase()));
 		} catch(Exception ex) {
-			logMsgs.add(new LogMsg(EmployeeManager.getLogMsg(), "red"));
+			logMsgs.add(new LogMsg(empManager.getLogMsg(), "red"));
 			logMsgs.add(new LogMsg("Role is currently used by: \n" + getRoleOwners(role), "red"));
 		}
 	}

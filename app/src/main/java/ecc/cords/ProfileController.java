@@ -13,10 +13,19 @@ import javax.servlet.http.HttpSession;
 
 public class ProfileController extends SimpleFormController {
 
-	private static DTO_EntityMapper mapper = new DTO_EntityMapper();
+	private DTO_EntityMapper mapper;
+	private EmployeeManager empManager;
 
 	public ProfileController() {
 		setCommandClass(EmployeeDTO.class);
+	}
+
+	public void setEmployeeManager(EmployeeManager empManager) {
+		this.empManager = empManager;
+	}
+
+	public void setMapper(DTO_EntityMapper mapper) {
+		this.mapper = mapper;
 	}
 
 	@Override
@@ -41,10 +50,11 @@ public class ProfileController extends SimpleFormController {
 		HttpSession session = req.getSession();
 		if(session.getAttribute("employee") == null || !empId.equals(((EmployeeDTO)session.getAttribute("employee")).getEmpId() + "")) {
 			try {
-				employee = mapper.mapToEmployeeDTO(EmployeeManager.getEmployee(Integer.parseInt(req.getParameter("empId"))));
+				employee = mapper.mapToEmployeeDTO(empManager.getEmployee(Integer.parseInt(req.getParameter("empId"))));
 				session.setAttribute("employee", employee);
 				return employee;
 			} catch(Exception ex) {
+				ex.printStackTrace();
 				res.sendError(404,"Employee not found!");
 				return employee;
 			}

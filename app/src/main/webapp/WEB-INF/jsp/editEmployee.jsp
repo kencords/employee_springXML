@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
+<%@ page import="ecc.cords.EmployeeDTO" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
@@ -6,30 +7,30 @@
 <html>
 	<head>
         <meta charset="utf-8">
-        <title>Employee Records System: Add Employee</title>
+        <title>Employee Records System: Edit Employee</title>
     </head>
 
   	<body>
-  		<h1>ADD EMPLOYEE</h1>
+  		<h1>EDIT EMPLOYEE</h1>
   		<div style="border:1px solid black; width:500px; margin: 0 auto; text-align:center;">
   			<c:forEach items="${logMsgs}" var="msg">
 	  			<p style="color:${msg.color};">${msg.logMsg}</p>
 	  		</c:forEach>
   			<form method="POST">
   				<h3>PERSONAL INFORMATION</h3>
-  				<input type="text" name="title" value ="${param.title}" placeholder="Title"><br>
-  				<input type="text" name="lastName" value ="${param.lastName}" placeholder="Last Name*"><br>
-  				<input type="text" name="firstName" value ="${param.firstName}" placeholder="First Name*"><br>
-  				<input type="text" name="middleName" value ="${param.middleName}" placeholder="Middle Name*"><br>
-  				<input type="text" name="suffix" value ="${param.suffix}" placeholder="Suffix"><br>
-  				<input type="text" name="bDate" value ="${param.bDate}" placeholder="Birthdate (yyyy-mm-dd)*"><br>
-  				<input type=text name="gwa" value ="${param.gwa}" placeholder="Gwa"><br>
+  				<input type="text" name="title" value ="${title}" placeholder="Title"><br>
+  				<input type="text" name="lastName" value ="${lastName}" placeholder="Last Name*"><br>
+  				<input type="text" name="firstName" value ="${firstName}" placeholder="First Name*"><br>
+  				<input type="text" name="middleName" value ="${middleName}" placeholder="Middle Name*"><br>
+  				<input type="text" name="suffix" value ="${suffix}" placeholder="Suffix"><br>
+  				<input type="text" name="bDate" value ="${bDate}" placeholder="Birthdate (yyyy-mm-dd)*"><br>
+  				<input type=text name="gwa" value ="${gwa}" placeholder="Gwa"><br>
   				<h3>ADDRESS</h3>
-  				<input type="text" name="strNo" value ="${param.strNo}" placeholder="Street Number*"><br>
-  				<input type="text" name="street" value ="${param.street}" placeholder="Street*"><br>
-  				<input type="text" name="brgy" value ="${param.brgy}" placeholder="Barangay*"><br>
-  				<input type="text" name="city" value ="${param.city}" placeholder="City*"><br>
-  				<input type="text" name="zipcode" value ="${param.zipcode}" placeholder="Zipcode*"><br>
+  				<input type="text" name="strNo" value ="${strNo}" placeholder="Street Number*"><br>
+  				<input type="text" name="street" value ="${street}" placeholder="Street*"><br>
+  				<input type="text" name="brgy" value ="${brgy}" placeholder="Barangay*"><br>
+  				<input type="text" name="city" value ="${city}" placeholder="City*"><br>
+  				<input type="text" name="zipcode" value ="${zipcode}" placeholder="Zipcode*"><br>
   				
   				<h3>CONTACTS</h3>
   				<c:forEach var="contact" items="${contacts}" varStatus="loop">
@@ -59,7 +60,7 @@
 	  				<option value="YES">YES</option>
 	  				<option value="NO">NO</option>
 	  			</select><br>
-	  			<input type="text" name="hDate" value ="${param.hDate}" placeholder="Hire Date (yyyy-mm-dd)*"><br>
+	  			<input type="text" name="hDate" value ="${hDate}" placeholder="Hire Date (yyyy-mm-dd)*"><br>
 
 	  			<h3>ROLES</h3>
 	  			<c:forEach var="role" items="${roles}" varStatus="loop">
@@ -73,8 +74,8 @@
 	  			</select>
 	  			<button style="display:inline-block;" type ="submit" value="" name="addRoleBtn">ADD</button>
 	  			<br><br><button style="display:inline-block;" type ="submit" value="" name="saveEmployeeBtn">SAVE EMPLOYEE</button>
+          <button style="display:inline-block;" type ="submit" value="" name="backBtn">BACK</button><br><br>
   			</form>
-        <button style="display:inline-block;" onClick="location.href='/home'">BACK</button><br><br>
   		</div>
   	</body>
  </html>

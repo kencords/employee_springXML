@@ -4,7 +4,11 @@ import java.util.List;
 
 public class DaoService{
 
-	private Dao dao = new Dao();
+	private Dao dao;
+
+	public void setDao(Dao dao) {
+		this.dao = dao;
+	}
 
 	public <E> void deleteElement(E e) {
 		dao.delete(e);

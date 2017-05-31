@@ -8,7 +8,11 @@ import java.util.Set;
 
 public class DTO_EntityMapper {
 
-	private static DaoService daoService = new DaoService();
+	private static DaoService daoService;
+
+	public void setDaoService(DaoService daoService) {
+		this.daoService = daoService;
+	}
 
 	public Address createAddress(AddressDTO addressDTO) {
 		Address address = new Address(addressDTO.getStreetNo(), addressDTO.getStreet(), addressDTO.getBrgy(), addressDTO.getCity(), addressDTO.getZipcode());

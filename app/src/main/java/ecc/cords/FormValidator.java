@@ -25,7 +25,11 @@ public class FormValidator {
 	private String hDate;
 	private boolean hasSaved;
 	private boolean isAccepted;
-	private EmployeeDTO employee = new EmployeeDTO();
+	private EmployeeManager empManager;
+
+	public void setEmployeeManager(EmployeeManager empManager) {
+		this.empManager = empManager;
+	}
 
 	public boolean getHasSaved() {
 		return hasSaved;
@@ -33,10 +37,6 @@ public class FormValidator {
 
 	public void setHasSaved(boolean hasSaved) {
 		this.hasSaved = hasSaved;
-	}
-
-	public void setEmployee(EmployeeDTO employee) {
-		this.employee = employee;
 	}
 
 	public void saveEmployeeIfValid(List<LogMsg> logMsgs, List<ContactDTO> contacts, List<RoleDTO> roles,
@@ -48,7 +48,7 @@ public class FormValidator {
 		mName = req.getParameter("middleName");
 		title = req.getParameter("title");
 		suffix = req.getParameter("suffix");
-		bDate = req.getParameter("birthDate");
+		bDate = req.getParameter("bDate");
 		gwa = req.getParameter("gwa");
 		strNo = req.getParameter("strNo");
 		street = req.getParameter("street");
@@ -56,11 +56,11 @@ public class FormValidator {
 		city = req.getParameter("city");
 		zipcode = req.getParameter("zipcode");
 		curHired = req.getParameter("currentlyHired");
-		hDate = req.getParameter("hireDate");
+		hDate = req.getParameter("hDate");
 		isAccepted = validateEmployeeForm(logMsgs, contacts.size());
 		if(isAccepted) {
 			try {
-				saveEmployee(logMsgs, contacts, roles, isEdit);
+				saveEmployee((EmployeeDTO) req.getSession().getAttribute("employee"), logMsgs, contacts, roles, isEdit);
 			} catch(Exception ex) {
 				ex.printStackTrace();
 			}
@@ -71,7 +71,7 @@ public class FormValidator {
 		return ((req.getParameter(paramName) == null || (hasSaved && isAccepted))? initVal : req.getParameter(paramName));
 	}
 
-	private void saveEmployee(List<LogMsg> logMsgs, List<ContactDTO> contacts, List<RoleDTO> roles, boolean isEdit) throws Exception {
+	private void saveEmployee(EmployeeDTO employee, List<LogMsg> logMsgs, List<ContactDTO> contacts, List<RoleDTO> roles, boolean isEdit) throws Exception {
 		if(!isEdit) { 
 			employee = new EmployeeDTO();
 		}
@@ -88,10 +88,10 @@ public class FormValidator {
 		employee.setHireDate(Utils.convertToDate(hDate));
 		employee.setRoles(new HashSet<RoleDTO>(roles));
 		if(!isEdit){
-			logMsgs.add(EmployeeManager.addEmployee(employee));
+			logMsgs.add(empManager.addEmployee(employee));
 		}
 		if(isEdit) {
-			logMsgs.add(EmployeeManager.updateEmployee(employee));
+			logMsgs.add(empManager.updateEmployee(employee));
 			System.out.println("save: " + employee.getContacts());
 		}
 	}

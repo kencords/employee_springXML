@@ -12,12 +12,20 @@ import java.util.List;
 
 public class HomeController extends SimpleFormController {
 
-	private static DaoService daoService = new DaoService();
-	private static DTO_EntityMapper mapper = new DTO_EntityMapper();
+	private DTO_EntityMapper mapper;
+	private EmployeeManager empManager;
 	private List<LogMsg> logMsgs = new ArrayList<>();
 
 	public HomeController() {
 		setCommandClass(EmployeeDTO.class);
+	}
+
+	public void setEmployeeManager(EmployeeManager empManager) {
+		this.empManager = empManager;
+	}
+
+	public void setMapper(DTO_EntityMapper mapper) {
+		this.mapper = mapper;
 	}
 
 	@Override
@@ -45,7 +53,7 @@ public class HomeController extends SimpleFormController {
 		}
 
 		if(req.getParameter("delEmpBtn") != null) {
-			logMsgs.add(EmployeeManager.deleteEmployee(Integer.parseInt(req.getParameter("delEmpBtn"))));
+			logMsgs.add(empManager.deleteEmployee(Integer.parseInt(req.getParameter("delEmpBtn"))));
 		}
 
 		if(req.getParameter("viewEmpBtn") != null) {

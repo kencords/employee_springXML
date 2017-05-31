@@ -5,15 +5,8 @@
 <hibernate-configuration>
 
 	<session-factory>
-
-		<property name="connection.url">jdbc:postgresql://localhost:5432/annot_employeedb</property>
-		<property name="connection.driver_class">org.postgresql.Driver</property>
-		<property name="connection.username">kcordero</property>
-		<property name="connection.password">sushimi11</property>
 		<property name="transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
 		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-		<property name="current_session_context_class">thread</property>
-
 		<property name="cache.use_second_level_cache">true</property>
 		<property name="cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
 		<property name="hibernate.cache.use_query_cache">true</property>

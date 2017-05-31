@@ -14,12 +14,26 @@ import java.util.stream.Collectors;
 
 public class AddEmployeeController extends SimpleFormController {
 	
-	private static DTO_EntityMapper mapper = new DTO_EntityMapper();
+	private DTO_EntityMapper mapper;
+	private EmployeeManager empManager;
+	private FormValidator validator;
 
 	private List<LogMsg> logMsgs = new ArrayList<>();
 
 	public AddEmployeeController() {
 		setCommandClass(EmployeeDTO.class);
+	}
+
+	public void setEmployeeManager(EmployeeManager empManager) {
+		this.empManager = empManager;
+	}
+
+	public void setMapper(DTO_EntityMapper mapper) {
+		this.mapper = mapper;
+	}
+
+	public void setFormValidator(FormValidator validator) {
+		this.validator = validator;
 	}
 
 	@Override
@@ -28,7 +42,6 @@ public class AddEmployeeController extends SimpleFormController {
 		List<ContactDTO> contacts = new ArrayList<>(employee.getContacts());
 		List<RoleDTO> roles = new ArrayList<>(employee.getRoles());
 		ModelAndView mav = new ModelAndView(getFormView());
-		req.setAttribute("page", "add");
 		req.setAttribute("contacts", contacts);
 		req.setAttribute("roles", roles);
 		req.setAttribute("availRoles", getAvailRoles(roles));
@@ -45,17 +58,30 @@ public class AddEmployeeController extends SimpleFormController {
 		List<RoleDTO> roles = new ArrayList<>(employee.getRoles());
 		ModelAndView mav = new ModelAndView(getFormView());
 
+		if(req.getParameter("saveEmployeeBtn") != null) {
+			try{
+				validator.saveEmployeeIfValid(logMsgs, contacts, roles, req, res, false);
+			} catch(Exception ex) {
+				logMsgs.add(new LogMsg("Problem occured in adding employee", "red"));
+			}
+		}
 		if(req.getParameter("addContactBtn") != null) {
-			System.out.println("wtf");
 			processAddContact(contacts, req.getParameter("conOpt"), req.getParameter("contact"));
 		}
-
-		req.setAttribute("logMsgs", Utils.sortLogMsgs(logMsgs));
-		logMsgs.clear();
+		if(req.getParameter("addRoleBtn") != null){
+			processAddRole(roles, Integer.parseInt(req.getParameter("roleOpt")));
+		}
+		if(req.getParameter("delConBtn") != null) {
+			processDeleteContact(contacts, Integer.parseInt(req.getParameter("delConBtn")));
+		}
+		if(req.getParameter("delRoleBtn") != null) {
+			roles.remove(Integer.parseInt(req.getParameter("delRoleBtn")));
+		}
 		
 		employee.setContacts(new HashSet<>(contacts));
 		employee.setRoles(new HashSet<>(roles));
-
+		req.setAttribute("logMsgs", Utils.sortLogMsgs(logMsgs));
+		logMsgs.clear();
 		req.setAttribute("page", "add");
 		req.setAttribute("contacts", contacts);
 		req.setAttribute("roles", roles);
@@ -102,5 +128,23 @@ public class AddEmployeeController extends SimpleFormController {
 		}
 		contacts.add(new ContactDTO((contactType.equals(Utils.contactOptions[0])? "Landline" : 
 		(contactType.equals(Utils.contactOptions[1])? "Mobile" : "Email"))  , contactValue));
+	}
+
+	private void processAddRole(List<RoleDTO> roles, int roleId) {
+		RoleDTO role = new RoleDTO();
+		try {
+			role = empManager.getRole(roleId);
+		} catch(Exception ex) {
+			logMsgs.add(new LogMsg(empManager.getLogMsg(), "red"));
+		}
+		roles.add(role);
+	}
+
+	private void processDeleteContact(List<ContactDTO> contacts, int index) {
+		if(contacts.size()==1) {
+			logMsgs.add(new LogMsg("Employee must have atleast one Contact!", "red"));
+			return;
+		}
+		contacts.remove(index);
 	}
 }
