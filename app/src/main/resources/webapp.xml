@@ -30,5 +30,10 @@
 		<property name="formView" value="roles"/>
 	</bean>
 
+	<bean name="/uploadFile" class="ecc.cords.UploadFileController" autowire="byName">
+		<property name="commandClass" value="ecc.cords.EmployeeFile"/>
+		<property name="formView" value="uploadFile"/>
+	</bean>
+
 	<bean name="formValidator" class="ecc.cords.FormValidator" autowire="byName"/>
 </beans>

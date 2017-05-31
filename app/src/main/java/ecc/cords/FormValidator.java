@@ -67,10 +67,6 @@ public class FormValidator {
 		}
 	}
 
-	public String valueFiller(HttpServletRequest req, String paramName, String initVal) {
-		return ((req.getParameter(paramName) == null || (hasSaved && isAccepted))? initVal : req.getParameter(paramName));
-	}
-
 	private void saveEmployee(EmployeeDTO employee, List<LogMsg> logMsgs, List<ContactDTO> contacts, List<RoleDTO> roles, boolean isEdit) throws Exception {
 		if(!isEdit) { 
 			employee = new EmployeeDTO();

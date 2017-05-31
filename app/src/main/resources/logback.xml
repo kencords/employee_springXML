@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <property name="dir" value="logs"/>
+
+  <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+      <Pattern>%d{yyyy-MM-dd_HH:mm:ss} [%level] %logger{36} - %msg%n</Pattern>
+    </encoder>
+  </appender>
+
+  <appender name="rollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>${dir}/logfiles.log</file>
+    <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+      <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%level] %logger{36} - %msg %n</Pattern>
+    </encoder>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <FileNamePattern>${dir}/%d{yyyy-MM-dd}.log</FileNamePattern>
+    </rollingPolicy>
+  </appender>
+
+  <logger name="ecc.cords" level="debug" additivity="false">
+    <appender-ref ref="rollingFileAppender"/>
+    <appender-ref ref="consoleAppender"/>
+  </logger>
+
+  <root>
+    <level value="error"/>
+    <appender-ref ref="rollingFileAppender"/>
+    <appender-ref ref="consoleAppender"/>
+  </root>
+</configuration>

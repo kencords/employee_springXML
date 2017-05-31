@@ -1,5 +1,7 @@
 package ecc.cords;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindException;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;	
@@ -12,6 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public class ProfileController extends SimpleFormController {
+
+	private final Logger logger = LoggerFactory.getLogger(ProfileController.class);
 
 	private DTO_EntityMapper mapper;
 	private EmployeeManager empManager;
@@ -30,6 +34,7 @@ public class ProfileController extends SimpleFormController {
 
 	@Override
 	protected ModelAndView showForm(HttpServletRequest req, HttpServletResponse res, BindException errors) {
+		logger.info("called showForm()");
 		EmployeeDTO employee = new EmployeeDTO();
 		try {
 			employee = loadEmployee(req, res);

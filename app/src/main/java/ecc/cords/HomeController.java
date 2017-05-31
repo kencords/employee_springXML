@@ -1,5 +1,7 @@
 package ecc.cords;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindException;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;	
@@ -11,6 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomeController extends SimpleFormController {
+
+	private final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
 	private DTO_EntityMapper mapper;
 	private EmployeeManager empManager;
@@ -41,6 +45,7 @@ public class HomeController extends SimpleFormController {
 	protected ModelAndView onSubmit(HttpServletRequest req, 
 									HttpServletResponse res,
 									Object command, BindException errors) {
+		logger.info("called onSubmit()");
 		List<EmployeeDTO> empList = null;
 		ModelAndView mav = new ModelAndView("home");
 		String order = "";

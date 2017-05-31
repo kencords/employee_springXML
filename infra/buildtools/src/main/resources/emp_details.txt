@@ -1,0 +1,17 @@
+Title:Mr.
+Last Name:Augus
+First Name:Mikazuki
+Middle Name:Tekkadan
+GWA:1.75
+Birth Date:1994-07-06
+Street Number: 8
+Street: CGS Street
+Barangay: Brgy Tekkadan
+City: Chryse City
+Zipcode: 2330
+Hire Date:2017-02-06
+Currently Hired:YES
+Email: barbatosLupus06@gmail.com
+Landline: 080-1111
+Mobile: 0908-603-1111
+Role Id: 8

@@ -1,5 +1,7 @@
 package ecc.cords;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindException;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;	
@@ -12,6 +14,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class RolesController extends SimpleFormController {
+
+	private final Logger logger = LoggerFactory.getLogger(RolesController.class);
 
 	private DTO_EntityMapper mapper;
 	private EmployeeManager empManager;
@@ -41,8 +45,8 @@ public class RolesController extends SimpleFormController {
 	protected ModelAndView onSubmit(HttpServletRequest req, 
 									HttpServletResponse res,
 									Object command, BindException errors) {
+		logger.info("called onSubmit()");
 		ModelAndView mav = new ModelAndView(getFormView());
-		
 		if(req.getParameter("addNowBtn") != null) {
 			processAddRole(req.getParameter("role_name").trim());
 		}
