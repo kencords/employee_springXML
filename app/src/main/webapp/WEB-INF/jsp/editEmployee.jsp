@@ -67,12 +67,14 @@
 	  				<input type="text" name="${role.roleName}${loop.index}" value="${role.roleName}" readonly>
 	  				<button style="display:inline-block;" type ="submit" value="${loop.index}" name="delRoleBtn">DELETE</button><br>
 	  			</c:forEach>
-	  			<select name="roleOpt">
-		  			<c:forEach var="availRole" items="${availRoles}">
-		  				<option value="${availRole.roleId}">${availRole.roleName}</option>
-		  			</c:forEach>
-	  			</select>
-	  			<button style="display:inline-block;" type ="submit" value="" name="addRoleBtn">ADD</button>
+	  			<c:if test="${not empty availRoles}">
+            <select name="roleOpt">
+  		  			<c:forEach var="availRole" items="${availRoles}">
+  		  				<option value="${availRole.roleId}">${availRole.roleName}</option>
+  		  			</c:forEach>
+  	  			</select>
+	  			  <button style="display:inline-block;" type ="submit" value="" name="addRoleBtn">ADD</button>
+          </c:if>
 	  			<br><br><button style="display:inline-block;" type ="submit" value="" name="saveEmployeeBtn">SAVE EMPLOYEE</button>
           <button style="display:inline-block;" type ="submit" value="" name="backBtn">BACK</button><br><br>
   			</form>

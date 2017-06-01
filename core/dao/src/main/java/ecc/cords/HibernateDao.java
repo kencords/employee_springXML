@@ -16,7 +16,7 @@ import org.hibernate.Transaction;
 public class HibernateDao implements Dao {
 
 	private SessionFactory sessionFactory;
-	private Statistics stats = HibernateUtil.getSessionFactory().getStatistics();
+	private Statistics stats;
 
 	public void setSessionFactory(SessionFactory sessionFactory) {
     	this.sessionFactory = sessionFactory;

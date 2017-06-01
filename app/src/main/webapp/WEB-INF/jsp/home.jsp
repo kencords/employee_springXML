@@ -21,7 +21,7 @@
   		</c:forEach>
 
   		<div align="right">
-	  		<form method="POST">
+	  		<form method="GET">
 	  				<select name="sort">
 	  					<option value="GWA">GWA</option>
 	  					<option value="LastName">LastName</option>

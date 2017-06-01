@@ -2,8 +2,6 @@ package ecc.cords;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindException;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -21,8 +19,6 @@ import org.apache.commons.io.IOUtils;
 
 public class UploadFileController extends SimpleFormController {
 
-	private final Logger logger = LoggerFactory.getLogger(UploadFileController.class);
-
 	private EmployeeManager empManager;
 	private List<LogMsg> logMsgs = new ArrayList<>();
 
@@ -34,7 +30,6 @@ public class UploadFileController extends SimpleFormController {
 	protected ModelAndView onSubmit(HttpServletRequest req, 
 									HttpServletResponse res,
 									Object command, BindException errors) {
-		logger.info("called onSubmit()");
 		EmployeeFile empfile = (EmployeeFile)command;
 		MultipartFile file = empfile.getFile();
 		System.out.println(file);
@@ -57,7 +52,6 @@ public class UploadFileController extends SimpleFormController {
 	}
 
 	private EmployeeDTO parseFile(MultipartFile file) throws Exception{
-		logger.info("Parsing file " + file.getOriginalFilename());
 		String[] lines = null;
 		try {
 			lines = IOUtils.toString(file.getInputStream(), "UTF-8").split("\n");

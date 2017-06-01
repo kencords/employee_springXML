@@ -1,7 +1,5 @@
 package ecc.cords;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindException;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;	
@@ -13,8 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomeController extends SimpleFormController {
-
-	private final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
 	private DTO_EntityMapper mapper;
 	private EmployeeManager empManager;
@@ -33,19 +29,10 @@ public class HomeController extends SimpleFormController {
 	}
 
 	@Override
-	protected ModelAndView showForm(HttpServletRequest req, HttpServletResponse res, BindException errors) {
-		req.getSession().invalidate();
-		ModelAndView mav = new ModelAndView("home");
-		List<EmployeeDTO> empList = mapper.mapSimplifiedEmployees("name.lastName", "asc", "");
-		mav.addObject("empList", empList);
-		return mav;
-	}
-
-	@Override
-	protected ModelAndView onSubmit(HttpServletRequest req, 
-									HttpServletResponse res,
-									Object command, BindException errors) {
-		logger.info("called onSubmit()");
+	public ModelAndView showForm(HttpServletRequest req, HttpServletResponse res, BindException errors) {
+		if(req.getSession(false) != null) {
+			req.getSession().invalidate();
+		}
 		List<EmployeeDTO> empList = null;
 		ModelAndView mav = new ModelAndView("home");
 		String order = "";
@@ -68,11 +55,9 @@ public class HomeController extends SimpleFormController {
 			logMsgs.add(new LogMsg("Sorted By " + order + ":" + ascDesc + 
 			(query!=null && !query.trim().equals("") ? " with name matching %" + query + "%" : ""), "green"));
 		}
-
 		if(req.getParameter("delEmpBtn") != null) {
 			logMsgs.add(empManager.deleteEmployee(Integer.parseInt(req.getParameter("delEmpBtn"))));
 		}
-
 		if(req.getParameter("viewEmpBtn") != null) {
 			return new ModelAndView("redirect:/employeeProfile?empId=" + req.getParameter("viewEmpBtn"));
 		}

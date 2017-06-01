@@ -13,6 +13,7 @@
     <bean name="employeeManager" class="ecc.cords.EmployeeManagerImpl" autowire="byName"/>
     <bean name="daoService" class="ecc.cords.DaoService" autowire="byName"/>
     <bean name="mapper" class="ecc.cords.DTO_EntityMapper" autowire="byName"/>
+    <bean name="logger" class="ecc.cords.LoggerService"/>
 
     <tx:advice id="txAdvice" transaction-manager="txManager">
 	    <tx:attributes>
@@ -30,4 +31,26 @@
     	<property name="sessionFactory" ref="sessionFactory"/>
   	</bean>
 
+    <aop:config>
+      <aop:aspect ref="logger">
+        <aop:pointcut id="saveMethods" expression="execution(* ecc.cords.DaoService.save*(..))"/>
+        <aop:pointcut id="deleteMethods" expression="execution(* ecc.cords.DaoService.delete*(..))"/>
+        <aop:pointcut id="updateMethods" expression="execution(* ecc.cords.DaoService.update*(..))"/>
+        <aop:pointcut id="getSingle" expression="execution(* ecc.cords.DaoService.getElement(..))"/>
+        <aop:pointcut id="getMultiple" expression="execution(public java.util.List ecc.cords.DaoService.get*(..))"/>
+        <aop:pointcut id="onSubmitMethods" expression="execution(* ecc.cords.*.onSubmit(..))"/>
+        <aop:pointcut id="showFormMethods" expression="execution(* ecc.cords.*.showForm(..))"/>
+        <aop:pointcut id="parseMethods" expression="execution(* ecc.cords.*.parse*(..))"/>
+
+        <aop:before pointcut-ref="saveMethods" method="beforeSaving"/>
+        <aop:before pointcut-ref="deleteMethods" method="beforeDeleting"/>
+        <aop:before pointcut-ref="updateMethods" method="beforeUpdating"/>
+        <aop:before pointcut-ref="getSingle" method="beforeGettingRecord"/>
+        <aop:before pointcut-ref="getMultiple" method="beforeGettingRecords"/>
+        <aop:before pointcut-ref="onSubmitMethods" method="beforeOnSubmit"/>
+        <aop:before pointcut-ref="showFormMethods" method="beforeShowForm"/>
+        <aop:before pointcut-ref="parseMethods" method="beforeParsing"/>
+      </aop:aspect>
+    </aop:config>
 </beans>
+
