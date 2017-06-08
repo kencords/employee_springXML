@@ -1,21 +1,23 @@
-package ecc.cords;
+package ecc.cords.impl;
 
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class EmployeeManagerImpl implements EmployeeManager{
+import ecc.cords.*;
+
+public class EmployeeManagerImpl implements EmployeeManager {
 
 	private DaoService daoService;
-	private DTO_EntityMapper mapper;
+	private DTOEntityMapper mapper;
 	private String logMsg = "";
 
 	public void setDaoService(DaoService daoService) {
 		this.daoService = daoService;
 	}
 
-	public void setMapper(DTO_EntityMapper mapper) {
+	public void setMapper(DTOEntityMapper mapper) {
 		this.mapper = mapper;
 	}
 
@@ -87,6 +89,10 @@ public class EmployeeManagerImpl implements EmployeeManager{
 		}
 	}
 
+	public EmployeeDTO getEmployeeDTO(int id) throws Exception {
+		return mapper.mapToEmployeeDTO(getEmployee(id));
+	}
+
 	public EmployeeDTO addEmployeeRole(EmployeeDTO employee, int role_id) throws Exception {
 		try {
 			Set<RoleDTO> roles = employee.getRoles();
@@ -145,6 +151,14 @@ public class EmployeeManagerImpl implements EmployeeManager{
 		}
 		logMsg = "Role " + role.getRoleName() + " cannot be updated!";
 		throw new Exception();
+	}
+
+	public List<EmployeeDTO> getSimplifiedEmployees(String order, String asc_desc, String query) {
+		return mapper.mapSimplifiedEmployees(daoService.getSimplifiedEmployees(order, asc_desc, query));
+	}
+
+	public List<RoleDTO> getAllRoles() {
+		return mapper.getAllRoles(daoService.getAllElements(Role.class));
 	}
 
 	public RoleDTO getRole(int role_id) throws Exception {

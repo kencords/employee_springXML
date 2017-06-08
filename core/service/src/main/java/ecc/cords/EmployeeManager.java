@@ -19,6 +19,10 @@ public interface EmployeeManager {
 
 	public Employee getEmployee(int id);
 
+	public EmployeeDTO getEmployeeDTO(int id) throws Exception;
+
+	public List<EmployeeDTO> getSimplifiedEmployees(String order, String asc_desc, String query);
+
 	public EmployeeDTO addEmployeeRole(EmployeeDTO employee, int role_id) throws Exception;
 
 	public EmployeeDTO deleteEmployeeRole(EmployeeDTO employee, RoleDTO role);
@@ -28,6 +32,8 @@ public interface EmployeeManager {
 	public String deleteRole(RoleDTO roleDTO) throws Exception;
 
 	public LogMsg updateRole(RoleDTO roleDTO, String role_name) throws Exception;
+
+	public List<RoleDTO> getAllRoles();
 
 	public RoleDTO getRole(int role_id) throws Exception;
 

@@ -13,7 +13,6 @@ import java.util.stream.Collectors;
 
 public class RolesController extends SimpleFormController {
 
-	private DTO_EntityMapper mapper;
 	private EmployeeManager empManager;
 	private List<LogMsg> logMsgs = new ArrayList<>();
 
@@ -23,10 +22,6 @@ public class RolesController extends SimpleFormController {
 
 	public void setEmployeeManager(EmployeeManager empManager) {
 		this.empManager = empManager;
-	}
-
-	public void setMapper(DTO_EntityMapper mapper) {
-		this.mapper = mapper;
 	}
 
 	@Override
@@ -73,7 +68,7 @@ public class RolesController extends SimpleFormController {
 	}
 
 	private List<RoleDTO> getRoles() {
-		return mapper.getAllRoles().stream()
+		return empManager.getAllRoles().stream()
 								   .sorted((role1,role2) -> Long.compare(role1.getRoleId(), role2.getRoleId()))
 					 			   .collect(Collectors.toList());
 	}

@@ -42,7 +42,7 @@ public class Address {
 		return addrId;
 	}
 
-	protected void setAddrId(Long addrId) {
+	public void setAddrId(Long addrId) {
 		this.addrId = addrId;
 	}
 

@@ -16,6 +16,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
 
 public class UploadFileController extends SimpleFormController {
 
@@ -66,67 +67,67 @@ public class UploadFileController extends SimpleFormController {
 		for(String curline : lines) {
 			String[] line = curline.split(":");
 
-			if(line[0].toLowerCase().equals("title")) {
+			if(StringUtils.equalsIgnoreCase(line[0], "title")) {
 				employee.setTitle(line[1].trim());
 			}
-			if(line[0].toLowerCase().equals("last name")) {
+			if(StringUtils.equalsIgnoreCase(line[0], "last name")) {
 				employee.setLastName(line[1].trim());
 			}
-			if(line[0].toLowerCase().equals("first name")) {
+			if(StringUtils.equalsIgnoreCase(line[0], "first name")) {
 				employee.setFirstName(line[1].trim());
 			}
-			if(line[0].toLowerCase().equals("middle name")) {
+			if(StringUtils.equalsIgnoreCase(line[0], "middle name")) {
 				employee.setMiddleName(line[1].trim());
 			}
-			if(line[0].toLowerCase().equals("suffix")) {
+			if(StringUtils.equalsIgnoreCase(line[0], "suffix")) {
 				employee.setSuffix(line[1].trim());
 			}
-			if(line[0].toLowerCase().equals("gwa")) {
+			if(StringUtils.equalsIgnoreCase(line[0], "gwa")) {
 				employee.setGwa(Float.parseFloat(line[1].trim()));
 			}
-			if(line[0].toLowerCase().equals("birth date")) {
+			if(StringUtils.equalsIgnoreCase(line[0], "birth date")) {
 				employee.setBirthDate(Utils.convertToDate(line[1].trim()));
 			}
-			if(line[0].toLowerCase().equals("hire date")) {
+			if(StringUtils.equalsIgnoreCase(line[0], "hire date")) {
 				employee.setHireDate(Utils.convertToDate(line[1].trim()));
 			}
-			if(line[0].toLowerCase().equals("currently hired")) {
+			if(StringUtils.equalsIgnoreCase(line[0], "currently hired")) {
 				employee.setCurrentlyHired(line[1].trim().toLowerCase().equals("yes"));
 			}
-			if(line[0].toLowerCase().equals("street number")) {
+			if(StringUtils.equalsIgnoreCase(line[0], "street number")) {
 				address.setStreetNo(Integer.parseInt(line[1].trim()));
 			}
-			if(line[0].toLowerCase().equals("street")) {
+			if(StringUtils.equalsIgnoreCase(line[0], "street")) {
 				address.setStreet(line[1].trim());
 			}
-			if(line[0].toLowerCase().equals("barangay")) {
+			if(StringUtils.equalsIgnoreCase(line[0], "barangay")) {
 				address.setBrgy(line[1].trim());
 			}
-			if(line[0].toLowerCase().equals("city")) {
+			if(StringUtils.equalsIgnoreCase(line[0], "city")) {
 				address.setCity(line[1].trim());
 			}
-			if(line[0].toLowerCase().equals("zipcode")) {
+			if(StringUtils.equalsIgnoreCase(line[0], "zipcode")) {
 				address.setZipcode(line[1].trim());
 			}
-			if(line[0].toLowerCase().equals("landline")) {
+			if(StringUtils.equalsIgnoreCase(line[0], "landline")) {
 				if(!Utils.isValidLandline(line[1].trim())) {
 					throw new Exception("Invalid landline");
 				}
 				contacts.add(new ContactDTO("Landline", line[1].trim()));
 			}
-			if(line[0].toLowerCase().equals("mobile")) {
+			if(StringUtils.equalsIgnoreCase(line[0], "mobile")) {
 				if(!Utils.isValidMobile(line[1].trim())) {
 					throw new Exception("Invalid mobile");
 				}
 				contacts.add(new ContactDTO("Mobile", line[1].trim()));
 			}
-			if(line[0].toLowerCase().equals("email")) {
+			if(StringUtils.equalsIgnoreCase(line[0], "email")) {
 				if(!Utils.isValidEmail(line[1].trim())) {
 					throw new Exception("Invalid email");
 				}
 				contacts.add(new ContactDTO("Email", line[1].trim()));
 			}
-			if(line[0].toLowerCase().equals("role id")) {
+			if(StringUtils.equalsIgnoreCase(line[0], "role id")) {
 				try {
 					roles.add(empManager.getRole(Integer.parseInt(line[1].trim())));
 				} catch(Exception ex) {

@@ -91,7 +91,7 @@ public class Employee{
         return empId;
     }
 
-    protected void setEmpId(Long empId) {
+    public void setEmpId(Long empId) {
         this.empId = empId;
     }
 

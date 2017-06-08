@@ -1,7 +1,8 @@
 Title:Mr.
-Last Name:Augus
-First Name:Mikazuki
-Middle Name:Tekkadan
+Last Name: Cabanlig
+First Name: Ervein Allan
+Middle Name: Bravo
+Suffix: Jr.
 GWA:1.75
 Birth Date:1994-07-06
 Street Number: 8
@@ -14,4 +15,7 @@ Currently Hired:YES
 Email: barbatosLupus06@gmail.com
 Landline: 080-1111
 Mobile: 0908-603-1111
+Email: barbatosLupus06@gmail.com
+Landline: 080-1111
+Mobile: 0905-111-1111
 Role Id: 8

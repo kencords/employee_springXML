@@ -10,10 +10,10 @@
 	   http://www.springframework.org/schema/aop 
 	   http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
-    <bean name="employeeManager" class="ecc.cords.EmployeeManagerImpl" autowire="byName"/>
-    <bean name="daoService" class="ecc.cords.DaoService" autowire="byName"/>
-    <bean name="mapper" class="ecc.cords.DTO_EntityMapper" autowire="byName"/>
-    <bean name="logger" class="ecc.cords.LoggerService"/>
+    <bean name="employeeManager" class="ecc.cords.impl.EmployeeManagerImpl" autowire="byName"/>
+    <bean name="daoService" class="ecc.cords.impl.DaoServiceImpl" autowire="byName"/>
+    <bean name="mapper" class="ecc.cords.impl.DTOEntityMapperImpl" autowire="byName"/>
+    <bean name="logger" class="ecc.cords.impl.LoggerServiceImpl"/>
 
     <tx:advice id="txAdvice" transaction-manager="txManager">
 	    <tx:attributes>

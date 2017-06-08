@@ -15,7 +15,6 @@ import java.util.stream.Collectors;
 
 public class EditEmployeeController extends SimpleFormController {
 	
-	private DTO_EntityMapper mapper;
 	private EmployeeManager empManager;
 	private FormValidator validator;
 	private List<LogMsg> logMsgs = new ArrayList<>();
@@ -26,10 +25,6 @@ public class EditEmployeeController extends SimpleFormController {
 
 	public void setEmployeeManager(EmployeeManager empManager) {
 		this.empManager = empManager;
-	}
-
-	public void setMapper(DTO_EntityMapper mapper) {
-		this.mapper = mapper;
 	}
 
 	public void setFormValidator(FormValidator validator) {
@@ -115,7 +110,7 @@ public class EditEmployeeController extends SimpleFormController {
 	}
 
 	private List<RoleDTO> getAvailRoles(List<RoleDTO> roles) {
-		return mapper.getAllRoles().stream()
+		return empManager.getAllRoles().stream()
 								   .filter(role -> !roles.contains(role))
 								   .sorted((role1,role2) -> Long.compare(role1.getRoleId(), role2.getRoleId()))
 								   .collect(Collectors.toList());

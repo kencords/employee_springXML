@@ -49,7 +49,7 @@ public class Contact{
 		return contactId;
 	}
 
-	protected void setContactId(Long contactId) {
+	public void setContactId(Long contactId) {
 		this.contactId = contactId;
 	}
 

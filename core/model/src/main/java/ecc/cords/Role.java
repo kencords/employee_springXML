@@ -49,7 +49,7 @@ public class Role{
 		return roleId;
 	}
 
-	protected void setRoleId(Long roleId) {
+	public void setRoleId(Long roleId) {
 		this.roleId = roleId;
 	}
 

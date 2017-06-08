@@ -1,5 +1,4 @@
-
-package ecc.cords;
+package ecc.cords.impl;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -7,7 +6,9 @@ import java.util.List;
 import java.util.HashSet;
 import java.util.Set;
 
-public class DTO_EntityMapper {
+import ecc.cords.*;
+
+public class DTOEntityMapperImpl implements DTOEntityMapper {
 
 	private static DaoService daoService;
 
@@ -83,8 +84,7 @@ public class DTO_EntityMapper {
 		return rolesDTO;
 	}
 
-	public List<RoleDTO> getAllRoles() {
-		List<Role> roles = daoService.getAllElements(Role.class);
+	public List<RoleDTO> getAllRoles(List<Role> roles) {
 		List<RoleDTO> rolesDTO = new ArrayList<>();
 		roles.forEach(role -> {
 			rolesDTO.add(new RoleDTO(role.getRoleId(), role.getRoleName()));
@@ -142,8 +142,7 @@ public class DTO_EntityMapper {
 		return employeesDTO;		
 	}
 
-	public List<EmployeeDTO> mapSimplifiedEmployees(String order, String asc_desc, String query) {
-		List<Object[]> employees = daoService.getSimplifiedEmployees(order, asc_desc, query);
+	public List<EmployeeDTO> mapSimplifiedEmployees(List<Object[]> employees) {
 		List<EmployeeDTO> employeesDTO = new ArrayList<>();
 		employees.forEach(obj -> {
 			EmployeeDTO employeeDTO = new EmployeeDTO();

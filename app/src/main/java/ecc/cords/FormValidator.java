@@ -6,6 +6,7 @@ import java.util.List;
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
+import org.apache.commons.lang3.StringUtils;
 
 public class FormValidator {
 
@@ -103,18 +104,18 @@ public class FormValidator {
 	}
 
 	private boolean validateEmployeeForm(List<LogMsg> logMsgs, int contactSize) {
-		boolean isValid = true;
-		isValid &= !lName.trim().equals("");
-		isValid &= !fName.trim().equals("");
-		isValid &= !mName.trim().equals("");
-		isValid &= !bDate.trim().equals("");
-		isValid &= !gwa.trim().equals("");
-		isValid &= !strNo.trim().equals("");
-		isValid &= !street.trim().equals("");
-		isValid &= !brgy.trim().equals("");
-		isValid &= !city.trim().equals("");
-		isValid &= !zipcode.trim().equals("");
-		isValid &= !hDate.trim().equals("");
+		boolean isValid = StringUtils.isNotBlank(lName) &&
+		StringUtils.isNotBlank(fName) &&
+		StringUtils.isNotBlank(mName) &&
+		StringUtils.isNotBlank(bDate) &&
+		StringUtils.isNotBlank(gwa) &&
+		StringUtils.isNotBlank(strNo) &&
+		StringUtils.isNotBlank(street) &&
+		StringUtils.isNotBlank(brgy) &&
+		StringUtils.isNotBlank(city) &&
+		StringUtils.isNotBlank(zipcode) &&
+		StringUtils.isNotBlank(hDate);
+
 		if(!isValid) {
 			logMsgs.add(new LogMsg("Please fill up fields marked with *", "red"));
 		}
@@ -122,11 +123,11 @@ public class FormValidator {
 			isValid = false;
 			logMsgs.add(new LogMsg("Employee must have atleast one contact!", "red"));
 		}
-		if(bDate!=null && !bDate.equals("") && !Utils.isValidDate(bDate)){
+		if(StringUtils.isNotBlank(bDate) && !Utils.isValidDate(bDate)){
 			isValid = false;
 			logMsgs.add(new LogMsg("Invalid Birthdate!", "red"));
 		}
-		if(hDate!=null && !hDate.equals("") && !Utils.isValidDate(hDate)){
+		if(StringUtils.isNotBlank(hDate) && !Utils.isValidDate(hDate)){
 			isValid = false;
 			logMsgs.add(new LogMsg("Invalid Hire Date!", "red"));
 		}

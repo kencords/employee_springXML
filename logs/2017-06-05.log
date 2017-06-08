@@ -1,0 +1,15 @@
+2017-06-05 10:31:50 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-05 10:31:50 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-05 10:31:50 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args name.lastName, asc,  
+2017-06-05 10:32:05 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-05 10:32:05 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-05 10:32:05 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args name.lastName, asc,  
+2017-06-05 10:32:07 [DEBUG] ecc.cords.RolesController - Displaying new form 
+2017-06-05 10:32:07 [DEBUG] ecc.cords.RolesController - Creating new command of class [ecc.cords.RoleDTO] 
+2017-06-05 10:32:07 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getAllElements(..) with args class ecc.cords.Role 
+2017-06-05 10:32:13 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-05 10:32:13 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-05 10:32:13 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args name.lastName, asc,  
+2017-06-05 11:27:48 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-05 11:27:48 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-05 11:27:48 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args name.lastName, asc,  

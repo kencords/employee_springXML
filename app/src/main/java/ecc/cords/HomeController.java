@@ -12,7 +12,6 @@ import java.util.List;
 
 public class HomeController extends SimpleFormController {
 
-	private DTO_EntityMapper mapper;
 	private EmployeeManager empManager;
 	private List<LogMsg> logMsgs = new ArrayList<>();
 
@@ -23,11 +22,7 @@ public class HomeController extends SimpleFormController {
 	public void setEmployeeManager(EmployeeManager empManager) {
 		this.empManager = empManager;
 	}
-
-	public void setMapper(DTO_EntityMapper mapper) {
-		this.mapper = mapper;
-	}
-
+	
 	@Override
 	public ModelAndView showForm(HttpServletRequest req, HttpServletResponse res, BindException errors) {
 		if(req.getSession(false) != null) {
@@ -75,6 +70,6 @@ public class HomeController extends SimpleFormController {
 		if(order!=null && !order.equals("")) {
 			dbOrder = order.equals("GWA")? "gwa" : (order.equals("LastName")? "name.lastName" : "hireDate");
 		}
-		return mapper.mapSimplifiedEmployees(dbOrder, dbAscDesc, query);
+		return empManager.getSimplifiedEmployees(dbOrder, dbAscDesc, query);
 	}
 }
