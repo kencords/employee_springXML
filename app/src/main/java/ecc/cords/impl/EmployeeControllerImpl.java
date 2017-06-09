@@ -1,9 +1,10 @@
-package ecc.cords;
+package ecc.cords.impl;
 
-import org.springframework.validation.BindException;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;	
-import org.springframework.web.servlet.mvc.SimpleFormController;
+import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,15 +14,18 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class EditEmployeeController extends SimpleFormController {
-	
+import ecc.cords.*;
+
+public class EmployeeControllerImpl extends MultiActionController implements EmployeeController {
+
+	private static final Logger logger = LoggerFactory.getLogger(EmployeeControllerImpl.class);
+
 	private EmployeeManager empManager;
 	private FormValidator validator;
 	private List<LogMsg> logMsgs = new ArrayList<>();
-
-	public EditEmployeeController() {
-		setCommandClass(EmployeeDTO.class);
-	}
+	private final String addView = "employeeForm";
+	private final String editView = "editEmployee";
+	private final String profileView = "profile";
 
 	public void setEmployeeManager(EmployeeManager empManager) {
 		this.empManager = empManager;
@@ -31,12 +35,25 @@ public class EditEmployeeController extends SimpleFormController {
 		this.validator = validator;
 	}
 
-	@Override
-	protected ModelAndView showForm(HttpServletRequest req, HttpServletResponse res, BindException errors) {
+	public ModelAndView addPage(HttpServletRequest req, HttpServletResponse res) throws Exception{
+		logger.info("Called addPage()");
+		EmployeeDTO employee = createEmployee(req);
+		List<ContactDTO> contacts = new ArrayList<>(employee.getContacts());
+		List<RoleDTO> roles = new ArrayList<>(employee.getRoles());
+		ModelAndView mav = new ModelAndView(addView);
+		req.setAttribute("contacts", contacts);
+		req.setAttribute("roles", roles);
+		req.setAttribute("availRoles", getAvailRoles(roles));
+		mav.addObject("employee", employee);
+		return mav;
+	}
+
+	public ModelAndView editPage(HttpServletRequest req, HttpServletResponse res) throws Exception {
+		logger.info("Called editPage()");
 		EmployeeDTO employee = loadEmployee(req);
 		List<ContactDTO> contacts = new ArrayList<>(employee.getContacts());
 		List<RoleDTO> roles = new ArrayList<>(employee.getRoles());
-		ModelAndView mav = new ModelAndView(getFormView());
+		ModelAndView mav = new ModelAndView(editView);
 		valueFiller(req, employee);
 		req.setAttribute("contacts", contacts);
 		req.setAttribute("roles", roles);
@@ -45,15 +62,65 @@ public class EditEmployeeController extends SimpleFormController {
 		return mav;
 	}
 
-	@Override
-	protected ModelAndView onSubmit(HttpServletRequest req, 
-									HttpServletResponse res,
-									Object command, BindException errors) {
+	public ModelAndView viewPage(HttpServletRequest req, HttpServletResponse res) throws Exception {
+		logger.info("Called viewPage()");
+		EmployeeDTO employee = new EmployeeDTO();
+		try {
+			employee = loadEmployee(req, res);
+			req.setAttribute("bDate", Utils.formatDate(employee.getBirthDate()));
+			req.setAttribute("hDate", Utils.formatDate(employee.getHireDate()));
+			req.setAttribute("curHired", employee.isCurrentlyHired() ? "YES" : "NO");
+		} catch(Exception ex) {	
+			return null;
+		}
+		ModelAndView mav = new ModelAndView(profileView);
+		mav.addObject("employee", employee);
+		return mav;
+	}
+
+	public ModelAndView addOnSubmit(HttpServletRequest req, HttpServletResponse res) throws Exception {
+		logger.info("Called addOnSubmit()");
+		EmployeeDTO employee = createEmployee(req);
+		List<ContactDTO> contacts = new ArrayList<>(employee.getContacts());
+		List<RoleDTO> roles = new ArrayList<>(employee.getRoles());
+		ModelAndView mav = new ModelAndView(addView);
+		if(req.getParameter("saveEmployeeBtn") != null) {
+			try{
+				validator.saveEmployeeIfValid(logMsgs, contacts, roles, req, res, false);
+			} catch(Exception ex) {
+				logMsgs.add(new LogMsg("Problem occured in adding employee", "red"));
+			}
+		}
+		if(req.getParameter("addContactBtn") != null) {
+			processAddContact(contacts, req.getParameter("conOpt"), req.getParameter("contact"));
+		}
+		if(req.getParameter("addRoleBtn") != null){
+			processAddRole(roles, Integer.parseInt(req.getParameter("roleOpt")));
+		}
+		if(req.getParameter("delConBtn") != null) {
+			processDeleteContact(contacts, Integer.parseInt(req.getParameter("delConBtn")));
+		}
+		if(req.getParameter("delRoleBtn") != null) {
+			roles.remove(Integer.parseInt(req.getParameter("delRoleBtn")));
+		}
+		employee.setContacts(new HashSet<>(contacts));
+		employee.setRoles(new HashSet<>(roles));
+		req.setAttribute("logMsgs", Utils.sortLogMsgs(logMsgs));
+		logMsgs.clear();
+		req.setAttribute("page", "add");
+		req.setAttribute("contacts", contacts);
+		req.setAttribute("roles", roles);
+		req.setAttribute("availRoles", getAvailRoles(roles));
+		mav.addObject("employee", employee);
+		return mav;
+	}
+
+	public ModelAndView editOnSubmit(HttpServletRequest req, HttpServletResponse res) throws Exception {
+		logger.info("Called editOnSubmit()");
 		EmployeeDTO employee = loadEmployee(req);
 		List<ContactDTO> contacts = new ArrayList<>(employee.getContacts());
 		List<RoleDTO> roles = new ArrayList<>(employee.getRoles());
-		ModelAndView mav = new ModelAndView(getFormView());
-
+		ModelAndView mav = new ModelAndView(editView);
 		if(req.getParameter("saveEmployeeBtn") != null) {
 			try {
 				validator.saveEmployeeIfValid(logMsgs, contacts, roles, req, res, true);
@@ -65,7 +132,7 @@ public class EditEmployeeController extends SimpleFormController {
 		if(req.getParameter("backBtn") != null) {;
 			logMsgs.clear();
 			req.getSession().invalidate();
-			return new ModelAndView("redirect:/employeeProfile?empId=" +  employee.getEmpId());
+			return new ModelAndView("redirect:/employee/viewPage?empId=" +  employee.getEmpId());
 		}
 		if(req.getParameter("addContactBtn") != null) {
 			processAddContact(req.getParameter("conOpt"), req.getParameter("contact"), employee);
@@ -83,7 +150,6 @@ public class EditEmployeeController extends SimpleFormController {
 		if(req.getParameter("delRoleBtn") != null) {
 			empManager.deleteEmployeeRole(employee, roles.get(Integer.parseInt(req.getParameter("delRoleBtn"))));		
 		}
-
 		valueFiller(req, employee);
 		req.setAttribute("logMsgs", Utils.sortLogMsgs(logMsgs));
 		logMsgs.clear();
@@ -93,6 +159,22 @@ public class EditEmployeeController extends SimpleFormController {
 		req.setAttribute("availRoles", getAvailRoles(roles));
 		mav.addObject("employee", employee);
 		return mav;
+	}
+
+	private EmployeeDTO createEmployee(HttpServletRequest req) {
+		EmployeeDTO employee = new EmployeeDTO();
+		try {
+			if(req.getSession().getAttribute("newEmp") == null) {
+				employee.setContacts(new HashSet<ContactDTO>());
+				employee.setRoles(new HashSet<RoleDTO>());
+				req.getSession().setAttribute("newEmp", employee);
+				return employee;
+			}
+			employee = (EmployeeDTO) req.getSession().getAttribute("newEmp");
+		} catch(Exception ex) {
+			ex.printStackTrace();
+		}
+		return employee;
 	}
 
 	private EmployeeDTO loadEmployee(HttpServletRequest req) {
@@ -109,6 +191,24 @@ public class EditEmployeeController extends SimpleFormController {
 		return employee;
 	}
 
+	private EmployeeDTO loadEmployee(HttpServletRequest req, HttpServletResponse res) throws Exception {
+		EmployeeDTO employee = new EmployeeDTO();
+		String empId = req.getParameter("empId");
+		HttpSession session = req.getSession();
+		if(session.getAttribute("employee") == null || !empId.equals(((EmployeeDTO)session.getAttribute("employee")).getEmpId() + "")) {
+			try {
+				employee = empManager.getEmployeeDTO(Integer.parseInt(req.getParameter("empId")));
+				session.setAttribute("employee", employee);
+				return employee;
+			} catch(Exception ex) {
+				ex.printStackTrace();
+				res.sendError(404,"Employee not found!");
+				return employee;
+			}
+		}
+		return (EmployeeDTO)session.getAttribute("employee");
+	}
+
 	private List<RoleDTO> getAvailRoles(List<RoleDTO> roles) {
 		return empManager.getAllRoles().stream()
 								   .filter(role -> !roles.contains(role))
@@ -116,30 +216,61 @@ public class EditEmployeeController extends SimpleFormController {
 								   .collect(Collectors.toList());
 	}
 
+	private void processAddContact(List<ContactDTO> contacts, String contactType, String contactValue) {
+		if(checkValidContact(contactType, contactValue)) {
+			contacts.add(new ContactDTO((contactType.equals(Utils.contactOptions[0])? "Landline" : 
+			(contactType.equals(Utils.contactOptions[1])? "Mobile" : "Email"))  , contactValue));
+		}
+	}
+
 	private void processAddContact(String contactType, String contactValue, EmployeeDTO employee) {
+		if(checkValidContact(contactType, contactValue)) {
+			employee.getContacts().add(new ContactDTO((contactType.equals(Utils.contactOptions[0])? "Landline" : 
+			(contactType.equals(Utils.contactOptions[1])? "Mobile" : "Email"))  , contactValue));
+		}
+	}
+
+	private boolean checkValidContact(String contactType, String contactValue) {
 		if(contactType.equals(Utils.contactOptions[0]) && !Utils.isValidLandline(contactValue)) {
 			logMsgs.add(new LogMsg("Invalid Landline!", "red"));
-			return;
+			return false;
 		}
 		else if(contactType.equals(Utils.contactOptions[1]) && !Utils.isValidMobile(contactValue)) {
 			logMsgs.add(new LogMsg("Invalid Mobile!", "red"));
-			return;
+			return false;
 		}
 		else if(contactType.equals(Utils.contactOptions[2]) && !Utils.isValidEmail(contactValue)) {
 			logMsgs.add(new LogMsg("Invalid Email!", "red"));
-			return;
+			return false;
 		}
-		employee.getContacts().add(new ContactDTO((contactType.equals(Utils.contactOptions[0])? "Landline" : 
-		(contactType.equals(Utils.contactOptions[1])? "Mobile" : "Email"))  , contactValue));
+		return true;
 	}
 
-	private void processAddRole(EmployeeDTO employee, int role_id) {
+	private void processAddRole(List<RoleDTO> roles, int roleId) {
+		RoleDTO role = new RoleDTO();
 		try {
-			employee = empManager.addEmployeeRole(employee, role_id);
+			role = empManager.getRole(roleId);
+		} catch(Exception ex) {
+			logMsgs.add(new LogMsg(empManager.getLogMsg(), "red"));
+		}
+		roles.add(role);
+	}
+
+	private void processAddRole(EmployeeDTO employee, int roleId) {
+		try {
+			employee = empManager.addEmployeeRole(employee, roleId);
 		} catch(Exception ex) {
 			ex.printStackTrace();
 			logMsgs.add(new LogMsg("Cannot add role!", "red"));
 		}
+	}
+
+	private void processDeleteContact(List<ContactDTO> contacts, int index) {
+		if(contacts.size()==1) {
+			logMsgs.add(new LogMsg("Employee must have atleast one Contact!", "red"));
+			return;
+		}
+		contacts.remove(index);
 	}
 
 	private void processDeleteContact(EmployeeDTO employee, List<ContactDTO> contacts, int index) {

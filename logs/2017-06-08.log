@@ -1,0 +1,219 @@
+2017-06-08 17:10:57 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 17:10:57 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 17:10:57 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args name.lastName, asc,  
+2017-06-08 17:14:35 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 17:14:35 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 17:14:35 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args name.lastName, desc,  
+2017-06-08 17:14:56 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 17:14:56 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 17:14:56 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args hireDate, asc,   
+2017-06-08 17:15:10 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 17:15:10 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 17:15:10 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args hireDate, asc,   
+2017-06-08 17:15:22 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 17:15:22 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 17:15:22 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args hireDate, asc,    
+2017-06-08 17:15:37 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 17:15:37 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 17:15:37 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args hireDate, asc, k 
+2017-06-08 17:15:46 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 17:15:46 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 17:15:46 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args gwa, asc, k 
+2017-06-08 17:16:06 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 17:16:06 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 17:16:06 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args name.lastName, desc, k 
+2017-06-08 17:17:07 [DEBUG] ecc.cords.UploadFileController - Displaying new form 
+2017-06-08 17:17:07 [DEBUG] ecc.cords.UploadFileController - Creating new command of class [ecc.cords.EmployeeFile] 
+2017-06-08 17:21:49 [DEBUG] ecc.cords.UploadFileController - Creating new command of class [ecc.cords.EmployeeFile] 
+2017-06-08 17:21:49 [DEBUG] ecc.cords.UploadFileController - No errors -> processing submit 
+2017-06-08 17:22:26 [DEBUG] ecc.cords.UploadFileController - Creating new command of class [ecc.cords.EmployeeFile] 
+2017-06-08 17:22:26 [DEBUG] ecc.cords.UploadFileController - No errors -> processing submit 
+2017-06-08 17:22:26 [INFO] ecc.cords.LoggerService - Getting single record: DaoService.getElement(..) with args 8, class ecc.cords.Role 
+2017-06-08 17:22:27 [INFO] ecc.cords.LoggerService - Saving record: DaoService.saveElement(..) with args ecc.cords.Employee@175eab6 
+2017-06-08 17:22:37 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 17:22:37 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 17:22:37 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args name.lastName, asc,  
+2017-06-08 17:22:40 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 17:22:40 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 17:22:40 [DEBUG] ecc.cords.ProfileController - Displaying new form 
+2017-06-08 17:22:40 [DEBUG] ecc.cords.ProfileController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 17:22:40 [INFO] ecc.cords.LoggerService - Getting single record: DaoService.getElement(..) with args 15, class ecc.cords.Employee 
+2017-06-08 17:24:16 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 17:24:16 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 17:24:17 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args name.lastName, asc,  
+2017-06-08 17:24:21 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 17:24:21 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 17:24:21 [DEBUG] ecc.cords.ProfileController - Displaying new form 
+2017-06-08 17:24:21 [DEBUG] ecc.cords.ProfileController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 17:24:21 [INFO] ecc.cords.LoggerService - Getting single record: DaoService.getElement(..) with args 15, class ecc.cords.Employee 
+2017-06-08 17:24:23 [DEBUG] ecc.cords.EditEmployeeController - Displaying new form 
+2017-06-08 17:24:23 [DEBUG] ecc.cords.EditEmployeeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 17:24:23 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getAllElements(..) with args class ecc.cords.Role 
+2017-06-08 18:04:53 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 18:04:53 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 18:04:53 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args name.lastName, asc,  
+2017-06-08 18:05:04 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 18:05:04 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 18:05:04 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args gwa, asc,  
+2017-06-08 18:11:38 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 18:11:38 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 18:11:39 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args gwa, asc,  
+2017-06-08 18:11:47 [DEBUG] ecc.cords.RolesController - Displaying new form 
+2017-06-08 18:11:47 [DEBUG] ecc.cords.RolesController - Creating new command of class [ecc.cords.RoleDTO] 
+2017-06-08 18:11:47 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getAllElements(..) with args class ecc.cords.Role 
+2017-06-08 18:19:28 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 18:19:28 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 18:19:29 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args name.lastName, asc,  
+2017-06-08 18:19:40 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 18:19:40 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 18:19:40 [DEBUG] ecc.cords.ProfileController - Displaying new form 
+2017-06-08 18:19:40 [DEBUG] ecc.cords.ProfileController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 18:19:40 [INFO] ecc.cords.LoggerService - Getting single record: DaoService.getElement(..) with args 15, class ecc.cords.Employee 
+2017-06-08 18:19:47 [DEBUG] ecc.cords.EditEmployeeController - Displaying new form 
+2017-06-08 18:19:47 [DEBUG] ecc.cords.EditEmployeeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 18:19:47 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getAllElements(..) with args class ecc.cords.Role 
+2017-06-08 18:19:56 [DEBUG] ecc.cords.EditEmployeeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 18:19:56 [DEBUG] ecc.cords.EditEmployeeController - No errors -> processing submit 
+2017-06-08 18:19:56 [DEBUG] ecc.cords.ProfileController - Displaying new form 
+2017-06-08 18:19:56 [DEBUG] ecc.cords.ProfileController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 18:19:56 [INFO] ecc.cords.LoggerService - Getting single record: DaoService.getElement(..) with args 15, class ecc.cords.Employee 
+2017-06-08 18:20:00 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 18:20:00 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 18:20:00 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args name.lastName, asc,  
+2017-06-08 18:36:09 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 18:36:09 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 18:36:10 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args name.lastName, asc,  
+2017-06-08 18:36:24 [DEBUG] ecc.cords.AddEmployeeController - Displaying new form 
+2017-06-08 18:36:24 [DEBUG] ecc.cords.AddEmployeeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 18:36:24 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getAllElements(..) with args class ecc.cords.Role 
+2017-06-08 18:36:30 [DEBUG] ecc.cords.AddEmployeeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 18:36:30 [DEBUG] ecc.cords.AddEmployeeController - No errors -> processing submit 
+2017-06-08 18:36:30 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getAllElements(..) with args class ecc.cords.Role 
+2017-06-08 18:38:19 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 18:38:19 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 18:38:19 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args name.lastName, asc,  
+2017-06-08 18:43:51 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 18:43:51 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 18:43:52 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args name.lastName, asc,  
+2017-06-08 18:45:02 [DEBUG] ecc.cords.UploadFileController - Displaying new form 
+2017-06-08 18:45:02 [DEBUG] ecc.cords.UploadFileController - Creating new command of class [ecc.cords.EmployeeFile] 
+2017-06-08 18:45:11 [DEBUG] ecc.cords.UploadFileController - Creating new command of class [ecc.cords.EmployeeFile] 
+2017-06-08 18:45:11 [DEBUG] ecc.cords.UploadFileController - No errors -> processing submit 
+2017-06-08 18:45:11 [INFO] ecc.cords.LoggerService - Getting single record: DaoService.getElement(..) with args 8, class ecc.cords.Role 
+2017-06-08 18:45:12 [INFO] ecc.cords.LoggerService - Saving record: DaoService.saveElement(..) with args ecc.cords.Employee@5d01b3 
+2017-06-08 18:45:15 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 18:45:15 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 18:45:15 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args name.lastName, asc,  
+2017-06-08 18:45:20 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 18:45:20 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 18:45:20 [DEBUG] ecc.cords.ProfileController - Displaying new form 
+2017-06-08 18:45:20 [DEBUG] ecc.cords.ProfileController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 18:45:20 [INFO] ecc.cords.LoggerService - Getting single record: DaoService.getElement(..) with args 15, class ecc.cords.Employee 
+2017-06-08 18:45:25 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 18:45:25 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 18:45:25 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args name.lastName, asc,  
+2017-06-08 18:45:34 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 18:45:34 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 18:45:34 [INFO] ecc.cords.LoggerService - Getting single record: DaoService.getElement(..) with args 16, class ecc.cords.Employee 
+2017-06-08 18:45:34 [INFO] ecc.cords.LoggerService - Deleting record: DaoService.deleteElement(..) with args ecc.cords.Employee@abe91c 
+2017-06-08 18:45:34 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args name.lastName, asc,  
+2017-06-08 19:06:23 [ERROR] o.s.web.servlet.DispatcherServlet - Context initialization failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name '/home' defined in class path resource [webapp.xml]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeeManager' defined in class path resource [service.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [ecc.cords.EmployeeManager]: Specified class is an interface
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:527) ~[spring-beans-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294) ~[spring-beans-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225) ~[spring-beans-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291) ~[spring-beans-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193) ~[spring-beans-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585) ~[spring-beans-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913) ~[spring-context-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464) ~[spring-context-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:631) ~[spring-webmvc-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:588) ~[spring-webmvc-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:645) ~[spring-webmvc-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:508) ~[spring-webmvc-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:449) ~[spring-webmvc-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:133) [spring-webmvc-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:244) [javax.servlet-api-3.1.0.jar:3.1.0]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:637) [jetty-servlet-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.servlet.ServletHolder.initialize(ServletHolder.java:421) [jetty-servlet-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:744) [jetty-servlet-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:348) [jetty-servlet-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1480) [jetty-webapp-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.startWebapp(JettyWebAppContext.java:357) [jetty-maven-plugin-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1442) [jetty-webapp-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:799) [jetty-server-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:261) [jetty-servlet-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:540) [jetty-webapp-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:432) [jetty-maven-plugin-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68) [jetty-util-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:131) [jetty-util-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:113) [jetty-util-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:113) [jetty-server-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:161) [jetty-server-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68) [jetty-util-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:131) [jetty-util-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:113) [jetty-util-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:113) [jetty-server-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68) [jetty-util-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:131) [jetty-util-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.server.Server.start(Server.java:452) [jetty-server-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:105) [jetty-util-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:113) [jetty-server-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:419) [jetty-server-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68) [jetty-util-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:460) [jetty-maven-plugin-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:328) [jetty-maven-plugin-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.eclipse.jetty.maven.plugin.JettyRunMojo.execute(JettyRunMojo.java:170) [jetty-maven-plugin-9.4.3.v20170317.jar:9.4.3.v20170317]
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134) [maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:207) [maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153) [maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145) [maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116) [maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80) [maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51) [maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128) [maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307) [maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193) [maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106) [maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:863) [maven-embedder-3.3.9.jar:3.3.9]
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288) [maven-embedder-3.3.9.jar:3.3.9]
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:199) [maven-embedder-3.3.9.jar:3.3.9]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289) [plexus-classworlds-2.5.2.jar:na]
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229) [plexus-classworlds-2.5.2.jar:na]
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415) [plexus-classworlds-2.5.2.jar:na]
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356) [plexus-classworlds-2.5.2.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeeManager' defined in class path resource [service.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [ecc.cords.EmployeeManager]: Specified class is an interface
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:997) ~[spring-beans-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:943) ~[spring-beans-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485) ~[spring-beans-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294) ~[spring-beans-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225) ~[spring-beans-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291) ~[spring-beans-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193) ~[spring-beans-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByName(AbstractAutowireCapableBeanFactory.java:1136) ~[spring-beans-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1086) ~[spring-beans-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	... 67 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [ecc.cords.EmployeeManager]: Specified class is an interface
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:56) ~[spring-beans-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:990) ~[spring-beans-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	... 77 common frames omitted
+2017-06-08 19:17:43 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 19:17:43 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 19:17:44 [INFO] ecc.cords.LoggerService - Getting single record: DaoService.getElement(..) with args 16, class ecc.cords.Employee 
+2017-06-08 19:17:44 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args name.lastName, asc,  
+2017-06-08 19:18:01 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 19:18:01 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 19:18:01 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args hireDate, asc,  
+2017-06-08 19:18:06 [DEBUG] ecc.cords.RolesController - Displaying new form 
+2017-06-08 19:18:06 [DEBUG] ecc.cords.RolesController - Creating new command of class [ecc.cords.RoleDTO] 
+2017-06-08 19:18:06 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getAllElements(..) with args class ecc.cords.Role 
+2017-06-08 19:18:10 [DEBUG] ecc.cords.HomeController - Displaying new form 
+2017-06-08 19:18:10 [DEBUG] ecc.cords.HomeController - Creating new command of class [ecc.cords.EmployeeDTO] 
+2017-06-08 19:18:10 [INFO] ecc.cords.LoggerService - Getting multiple records: DaoService.getSimplifiedEmployees(..) with args name.lastName, asc,  

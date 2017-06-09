@@ -14,6 +14,7 @@
     <bean name="daoService" class="ecc.cords.impl.DaoServiceImpl" autowire="byName"/>
     <bean name="mapper" class="ecc.cords.impl.DTOEntityMapperImpl" autowire="byName"/>
     <bean name="logger" class="ecc.cords.impl.LoggerServiceImpl"/>
+    <bean name="formValidator" class="ecc.cords.impl.FormValidatorImpl" autowire="byName"/>
 
     <tx:advice id="txAdvice" transaction-manager="txManager">
 	    <tx:attributes>
@@ -33,23 +34,25 @@
 
     <aop:config>
       <aop:aspect ref="logger">
+        <!--<aop:pointcut id="onSubmitMethods" expression="execution(* ecc.cords.*Controller.onSubmit(..))"/>
+        <aop:pointcut id="showFormMethods" expression="execution(* ecc.cords.*Controller.showForm(..))"/>
+        <aop:pointcut id="showPageMethods" expression="execution(* ecc.cords.*Controller.*Page(..))"/>
+        <aop:pointcut id="parseMethods" expression="execution(* ecc.cords.impl.*.parse*(..))"/> -->
         <aop:pointcut id="saveMethods" expression="execution(* ecc.cords.DaoService.save*(..))"/>
         <aop:pointcut id="deleteMethods" expression="execution(* ecc.cords.DaoService.delete*(..))"/>
         <aop:pointcut id="updateMethods" expression="execution(* ecc.cords.DaoService.update*(..))"/>
         <aop:pointcut id="getSingle" expression="execution(* ecc.cords.DaoService.getElement(..))"/>
         <aop:pointcut id="getMultiple" expression="execution(public java.util.List ecc.cords.DaoService.get*(..))"/>
-        <aop:pointcut id="onSubmitMethods" expression="execution(* ecc.cords.*.onSubmit(..))"/>
-        <aop:pointcut id="showFormMethods" expression="execution(* ecc.cords.*.showForm(..))"/>
-        <aop:pointcut id="parseMethods" expression="execution(* ecc.cords.*.parse*(..))"/>
-
+        
+        <!--<aop:before pointcut-ref="onSubmitMethods" method="beforeOnSubmit"/>
+        <aop:before pointcut-ref="showFormMethods" method="beforeShowForm"/>
+        <aop:before pointcut-ref="showPageMethods" method="beforeShowPage"/>
+        <aop:before pointcut-ref="parseMethods" method="beforeParsing"/> -->
         <aop:before pointcut-ref="saveMethods" method="beforeSaving"/>
         <aop:before pointcut-ref="deleteMethods" method="beforeDeleting"/>
         <aop:before pointcut-ref="updateMethods" method="beforeUpdating"/>
         <aop:before pointcut-ref="getSingle" method="beforeGettingRecord"/>
         <aop:before pointcut-ref="getMultiple" method="beforeGettingRecords"/>
-        <aop:before pointcut-ref="onSubmitMethods" method="beforeOnSubmit"/>
-        <aop:before pointcut-ref="showFormMethods" method="beforeShowForm"/>
-        <aop:before pointcut-ref="parseMethods" method="beforeParsing"/>
       </aop:aspect>
     </aop:config>
 </beans>

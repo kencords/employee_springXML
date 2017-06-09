@@ -1,4 +1,4 @@
-package ecc.cords;
+package ecc.cords.impl;
 
 import java.util.HashSet;
 import java.util.List;
@@ -8,7 +8,9 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import org.apache.commons.lang3.StringUtils;
 
-public class FormValidator {
+import ecc.cords.*;
+
+public class FormValidatorImpl implements FormValidator{
 
 	private String lName;
 	private String fName;
@@ -24,20 +26,11 @@ public class FormValidator {
 	private String zipcode;
 	private String curHired;
 	private String hDate;
-	private boolean hasSaved;
 	private boolean isAccepted;
 	private EmployeeManager empManager;
 
 	public void setEmployeeManager(EmployeeManager empManager) {
 		this.empManager = empManager;
-	}
-
-	public boolean getHasSaved() {
-		return hasSaved;
-	}	
-
-	public void setHasSaved(boolean hasSaved) {
-		this.hasSaved = hasSaved;
 	}
 
 	public void saveEmployeeIfValid(List<LogMsg> logMsgs, List<ContactDTO> contacts, List<RoleDTO> roles,

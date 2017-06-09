@@ -15,7 +15,7 @@
   			<c:forEach items="${logMsgs}" var="msg">
 	  			<p style="color:${msg.color};">${msg.logMsg}</p>
 	  		</c:forEach>
-  			<form method="POST">
+  			<form method="POST" action="/employee/addOnSubmit">
   				<h3>PERSONAL INFORMATION</h3>
   				<input type="text" name="title" value ="${param.title}" placeholder="Title"><br>
   				<input type="text" name="lastName" value ="${param.lastName}" placeholder="Last Name*"><br>

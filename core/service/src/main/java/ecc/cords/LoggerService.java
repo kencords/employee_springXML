@@ -4,6 +4,12 @@ import org.aspectj.lang.JoinPoint;
 
 public interface LoggerService {
 
+	//public void beforeOnSubmit(JoinPoint joinPoint);
+
+	//public void beforeShowForm(JoinPoint joinPoint);
+
+	//public void beforeShowPage(JoinPoint joinPoint);
+	
 	public void beforeSaving(JoinPoint joinPoint);
 
 	public void beforeUpdating(JoinPoint joinPoint);
@@ -14,9 +20,5 @@ public interface LoggerService {
 
 	public void beforeGettingRecords(JoinPoint joinPoint);
 
-	public void beforeOnSubmit(JoinPoint joinPoint);
-
-	public void beforeShowForm(JoinPoint joinPoint);
-
-	public void beforeParsing(JoinPoint joinPoint);
+	//public void beforeParsing(JoinPoint joinPoint);
 }

@@ -12,7 +12,7 @@
   	<body>
   		<h1>EMPLOYEE RECORDS SYSTEM</h1>
 
-  		<button style="display:inline-block;" onClick="location.href='/addEmployee'">Add Employee</button>
+  		<button style="display:inline-block;" onClick="location.href='/employee/addPage'">Add Employee</button>
   		<button style="display:inline-block;" onClick="location.href='/uploadFile'">Upload File</button>
   		<button style="display:inline-block;" onClick="location.href='/manageRoles'">Manage Roles</button>
   		

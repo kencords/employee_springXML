@@ -4,36 +4,22 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean name="/home" class="ecc.cords.HomeController" autowire="byName">
+	<bean name="/home" class="ecc.cords.impl.HomeControllerImpl" autowire="byName">
 	    <property name="commandClass" value="ecc.cords.EmployeeDTO"/>
 	    <property name="formView" value="home"/>
 	</bean>
 
-	<bean name="/addEmployee" class="ecc.cords.AddEmployeeController" autowire="byName">
-		<property name="commandClass" value="ecc.cords.EmployeeDTO"/>
-		<property name="formView" value="employeeForm"/>
-	</bean>
+	<bean name="/employee/*" class="ecc.cords.impl.EmployeeControllerImpl" autowire="byName"/>
 
-	<bean name="/editEmployee" class="ecc.cords.EditEmployeeController" autowire="byName">
-		<property name="commandClass" value="ecc.cords.EmployeeDTO"/>
-		<property name="formView" value="editEmployee"/>
-	</bean>
-
-	<bean name="/employeeProfile" class="ecc.cords.ProfileController" autowire="byName">
-		<property name="commandClass" value="ecc.cords.EmployeeDTO"/>
-		<property name="formView" value="profile"/>
-	</bean>
-
-	<bean name="/manageRoles" class="ecc.cords.RolesController" autowire="byName">
+	<bean name="/manageRoles" class="ecc.cords.impl.RolesControllerImpl" autowire="byName">
 		<property name="commandName" value="role" />
 		<property name="commandClass" value="ecc.cords.RoleDTO"/>
 		<property name="formView" value="roles"/>
 	</bean>
 
-	<bean name="/uploadFile" class="ecc.cords.UploadFileController" autowire="byName">
+	<bean name="/uploadFile" class="ecc.cords.impl.UploadFileControllerImpl" autowire="byName">
 		<property name="commandClass" value="ecc.cords.EmployeeFile"/>
 		<property name="formView" value="uploadFile"/>
 	</bean>
 
-	<bean name="formValidator" class="ecc.cords.FormValidator" autowire="byName"/>
 </beans>

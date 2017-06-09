@@ -12,7 +12,7 @@
     <body>
     	<h1>EMPLOYEE PROFILE</h1>
     	<div align="left">
-    		<button style="display:inline-block;" onclick="location.href='/editEmployee?empId=${employee.empId}'">Edit Employee</button>
+    		<button style="display:inline-block;" onclick="location.href='/employee/editPage?empId=${employee.empId}'">Edit Employee</button>
   			<button style="display:inline-block;" onClick="location.href='/home'">Back</button>
   			<div align="left">
   				<br><b>NAME:</b>${employee.title} ${employee.firstName} ${employee.middleName}, ${employee.lastName} ${employee.suffix}

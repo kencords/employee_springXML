@@ -10,38 +10,51 @@ import ecc.cords.LoggerService;
 
 public class LoggerServiceImpl implements LoggerService {
 
-	private static final Logger logger = LoggerFactory.getLogger(LoggerService.class);
+	private static final Logger logger = LoggerFactory.getLogger(LoggerServiceImpl.class);
 
-	public void beforeSaving(JoinPoint joinPoint) {
-		logger.info("Saving record: " + joinPoint.getSignature().toShortString() + " with args " + getArgValues(joinPoint));
-	}
-
-	public void beforeUpdating(JoinPoint joinPoint) {
-		logger.info("Updating record: " + joinPoint.getSignature().toShortString() + " with args " + getArgValues(joinPoint));
-	}
-
-	public void beforeDeleting(JoinPoint joinPoint) {
-		logger.info("Deleting record: " + joinPoint.getSignature().toShortString() + " with args " + getArgValues(joinPoint));
-	}
-
-	public void beforeGettingRecord(JoinPoint joinPoint) {
-		logger.info("Getting single record: " + joinPoint.getSignature().toShortString() + " with args " + getArgValues(joinPoint));
-	}
-
-	public void beforeGettingRecords(JoinPoint joinPoint) {
-		logger.info("Getting multiple records: " + joinPoint.getSignature().toShortString() + " with args " + getArgValues(joinPoint));
-	}
-
+	/*@Override
 	public void beforeOnSubmit(JoinPoint joinPoint) {
 		logger.info("Called onSubmit()");
 	}
 
+	@Override
 	public void beforeShowForm(JoinPoint joinPoint) {
 		logger.info("Called showForm()");
 	}
 
+	@Override
+	public void beforeShowPage(JoinPoint joinPoint) {
+		logger.info("Called " + joinPoint.getSignature().toShortString());
+	}
+
+	@Override
 	public void beforeParsing(JoinPoint joinPoint) {
 		logger.info("Parsed file: " + joinPoint.getSignature().toShortString() + " with args " + getArgValues(joinPoint));
+	}*/
+
+	@Override
+	public void beforeSaving(JoinPoint joinPoint) {
+		logger.info("Saving record: " + joinPoint.getSignature().toShortString() + " with args " + getArgValues(joinPoint));
+	}
+
+	@Override
+	public void beforeUpdating(JoinPoint joinPoint) {
+		logger.info("Updating record: " + joinPoint.getSignature().toShortString() + " with args " + getArgValues(joinPoint));
+	}
+
+	@Override
+	public void beforeDeleting(JoinPoint joinPoint) {
+		logger.info("Deleting record: " + joinPoint.getSignature().toShortString() + " with args " + getArgValues(joinPoint));
+	}
+
+	@Override
+	public void beforeGettingRecord(JoinPoint joinPoint) {
+		logger.info("Getting single record: " + joinPoint.getSignature().toShortString() + " with args " + getArgValues(joinPoint));
+	}
+
+	@Override
+	public void beforeGettingRecords(JoinPoint joinPoint) {
+		logger.info("Getting multiple records: " + joinPoint.getSignature().toShortString() + " with args " + getArgValues(joinPoint));
 	}
 
 	private String getArgValues(JoinPoint joinPoint) {
